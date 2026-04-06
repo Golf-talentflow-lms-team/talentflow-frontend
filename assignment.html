@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Assignment - TalentFlow LMS</title>
+     <link rel="stylesheet" href="assignment.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  </head>
+ <body>
+     <!-- Sidebar -->
+     <aside class="sidebar">
+          <button class="sidebar-close" onclick="closeSidebar()">
+          <i class="fa-solid fa-xmark"></i>
+          </button>
+         <div class="sidebar-header">
+             <div class="logo"><img src="images/logo.png" alt="logo"> TalentFlow</div>
+             <div class="user-info">
+                 <div class="user-name">Adedokun Daniel</div>
+                 <div class="user-id">ID: CAR123456</div>
+             </div>
+         </div>
+         <ul class="sidebar-menu">
+             <li class="menu-item">
+                 <span class="menu-icon"><i class="fa-solid fa-dashboard"></i></span>
+                 <span>Dashboard</span>
+             </li>
+             <li class="menu-item">
+                 <span class="menu-icon"><i class="fa-solid fa-search"></i></span>
+                 <span>Explore</span>
+             </li>
+             <li class="menu-item">
+                 <span class="menu-icon"><i class="fa-solid fa-book"></i></span>
+                 <span>Lessons</span>
+             </li>
+             <li class="menu-item active">
+                 <span class="menu-icon"><i class="fa-solid fa-check-circle"></i></span>
+                 <span>Assignments</span>
+                 <span class="menu-badge">2</span>
+             </li>
+             <li class="menu-item">
+                 <span class="menu-icon"><i class="fa-solid fa-comment"></i></span>
+                 <span>Discussion</span>
+             </li>
+             <li class="menu-item">
+                 <span class="menu-icon"><i class="fa-solid fa-chart-line"></i></span>
+                 <span>Progress</span>
+             </li>
+             <li class="menu-item" style="margin-top: auto;">
+                 <span class="menu-icon"><i class="fa-solid fa-question-circle"></i></span>
+                 <span>Help</span>
+             </li>
+             <li class="menu-item">
+                 <span class="menu-icon"><i class="fa-solid fa-gear"></i></span>
+                 <span>Settings</span>
+             </li>
+             <li class="menu-item logout">
+                 <span class="menu-icon"><i class="fa-solid fa-door-open"></i></span>
+                 <span>Logout</span>
+             </li>
+          </ul>
+      </aside>
+      <div id="overlay" onclick="closeSidebar()"></div>
+     <!-- Main Content -->
+     <main class="main-content">
+         <!-- Header -->
+         <div class="header">
+             <button class="menu-toggle" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i>
+             </button>
+             <div class="search-box">
+                 <span><i class="fa-solid fa-search"></i></span>
+                 <input type="text" placeholder="Search...">
+             </div>
+             <div class="header-icons">
+                 <button class="icon-btn"><i class="fa-solid fa-star"></i></button>
+                 <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
+             </div>
+         </div>
+         <!-- Breadcrumb -->
+         <div class="breadcrumb">
+             <span class="breadcrumb-item">Product Design</span>
+             <span class="breadcrumb-separator">›</span>
+             <span class="breadcrumb-item">Module 2: UX Foundations</span>
+             <span class="breadcrumb-separator">›</span>
+             <span class="breadcrumb-item active">Assignment</span>
+         </div>
+
+         <!-- Content Wrapper -->
+         <div class="content-wrapper">
+             <!-- Left Column - Assignments List -->
+             <div class="assignments-list">
+                 <!-- Assignment 1 -->
+                 <div class="assignment-item" onclick="selectAssignment(this)">
+                     <div class="assignment-header">
+                         <div class="assignment-badge badge-in-progress">ASSIGNMENT • MONTH 3</div>
+                         <h3 class="assignment-title">Apply UX Principles to a Real Product</h3>
+                         <div class="assignment-meta">
+                             <span class="assignment-meta-item">
+                                 <span class="status-indicator status-blue"></span>
+                                 Due by 25 MARCH
+                              </span>
+                             <span class="assignment-meta-item"><i class="fa-solid fa-eye"></i> 230 views</span>
+                         </div>
+                     </div>
+                 </div>
+
+                 <!-- Assignment 2 -->
+                 <div class="assignment-item" onclick="selectAssignment(this)">
+                     <div class="assignment-header">
+                         <div class="assignment-badge badge-pending">PENDING</div>
+                         <h3 class="assignment-title">Apply UX Principles to a Real Product</h3>
+                         <div class="assignment-meta">
+                             <span class="assignment-meta-item">
+                                 <span class="status-indicator status-blue"></span>
+                                 Due by 15 MARCH
+                             </span>
+                             <span class="assignment-meta-item"><i class="fa-solid fa-eye"></i> 180 views</span>
+                         </div>
+                     </div>
+                   </div>
+
+                 <!-- Assignment 3 -->
+                 <div class="assignment-item" onclick="selectAssignment(this)">
+                     <div class="assignment-header">
+                         <div class="assignment-badge badge-done">DONE</div>
+                         <h3 class="assignment-title">Apply UX Principles to a Real Product</h3>
+                         <div class="assignment-meta">
+                             <span class="assignment-meta-item">
+                                 <span class="status-indicator status-green"></span>
+                                 Completed
+                              </span>
+                             <span class="assignment-meta-item"><i class="fa-solid fa-eye"></i> 145 views</span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- Right Column - Assignment Brief -->
+             <div class="sidebar-panel">
+                 <div class="panel-section">
+                     <div class="panel-title"><i class="fa-solid fa-file-lines"></i> Assignment Brief</div>
+                     <p class="panel-text">
+                         In this assignment, you will apply the UX principles you've learned to analyze an existing product. Identify at least 3 usability issues. Then propose improvements based on UX best practices.
+                     </p>
+                  </div>
+
+                 <div class="panel-section">
+                     <div class="panel-title"><i class="fa-solid fa-box"></i> Deliverables</div>
+                     <ul class="deliverables-list">
+                         <li>A document or PDF outlining your analysis</li>
+                         <li>At least 3 usability issues identified</li>
+                         <li>Proposed improvements for each issue</li>
+                         <li>Optional: Screenshots or visuals to support your points</li>
+                     </ul>
+                 </div>
+
+                 <div class="panel-section">
+                     <div class="panel-title"><i class="fa-solid fa-book"></i> Resources</div>
+                     <ul class="resources-list">
+                         <li>
+                             <a href="#" class="resource-link">
+                                 <span class="resource-icon"><i class="fa-solid fa-list-check"></i></span>
+                                 UX Evaluation Checklist
+                             </a>
+                         </li>
+                         <li>
+                             <a href="#" class="resource-link">
+                                 <span class="resource-icon"><i class="fa-solid fa-file-pdf"></i></span>
+                                 Example Submission
+                             </a>
+                          </li>
+                         <li>
+                             <a href="#" class="resource-link">
+                                 <span class="resource-icon"><i class="fa-solid fa-download"></i></span>
+                                 Download Template
+                             </a>
+                         </li>
+                      </ul>
+                  </div>
+
+                 <button class="submit-btn" onclick="submitAssignment()">
+                     Submit Assignment
+                     <span><i class="fa-solid fa-arrow-right"></i></span>
+                 </button>
+              </div>
+          </div>
+      </main>
+      <!-- SUBMISSION MODAL -->
+     <div id="submissionModal" class="modal">
+         <form class="modal-content" id="assignmentForm">
+              <!-- CLOSE -->
+             <span class="close-btn" onclick="closeModal()">
+                  <i class="fa-solid fa-xmark"></i>
+             </span>
+             <h2>Submit your work</h2>
+             <!-- UPLOAD -->
+             <div class="upload-box">
+                 <i class="fa-solid fa-cloud-arrow-up"></i>
+                 <p>Drag or drop your file here</p>
+                 <p class="small-text">or browse to choose file</p>
+                  <input type="file" id="fileInput" hidden>
+                  <button type="button" class="choose-btn"
+                      onclick="document.getElementById('fileInput').click()">
+                      Choose file
+                  </button>
+                  <p id="fileName" style="margin-top:10px; font-size:13px; color:#10b981;"></p>
+              </div>
+             <p class="or-text">or submit a link</p>
+             <!-- LINK -->
+             <input type="text" id="linkInput" class="input-field"
+             placeholder="Google Doc, Figma, or any public URL">
+             <!-- NOTE -->
+             <textarea class="textarea"placeholder="Note to Instructor (optional)"></textarea>
+             <!-- CHECKLIST -->
+             <div class="checklist">
+                 <label><input type="checkbox" required> I've reviewed the assignment brief</label>
+                 <label><input type="checkbox" required> My submission meets the required format</label>
+                 <label><input type="checkbox" required> I've included all requested deliverables</label>
+              </div>
+             <!-- BUTTONS -->
+             <div class="modal-actions">
+                 <button type="submit" class="submit-btn"> Submit Assignment <i class="fa-solid fa-arrow-right"></i></button>
+                 <button type="button" class="draft-btn" onclick="saveDraft()">Save Draft</button>
+              </div>
+          </form>
+      </div>
+      <!-- SUCCESS POPUP -->
+      <div id="statusPopup" class="success-popup">
+          <div class="success-content">
+              <i class="fa-solid fa-circle-check"></i>
+              <h3 id="popupTitle">Success</h3>
+              <p id="popupMessage">Action completed</p>
+              <button onclick="closePopup()">OK</button>
+          </div>
+     </div>
+     <script src="assignment.js"></script>
+   </body>
+</html>
