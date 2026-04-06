@@ -200,10 +200,19 @@ document.getElementById("assignmentForm").addEventListener("submit", function (e
 
 // SAVE DRAFT
 function saveDraft() {
+  const file = document.getElementById("fileInput").files[0];
+  const link = document.getElementById("linkInput").value.trim();
+
+  // ❌ If nothing is provided
+  if (!file && !link) {
+    showPopup("Error", "Please upload a file or provide a link before saving.");
+    return;
+  }
+
+  // ✅ If valid
   closeModal();
   showPopup("Draft Saved!", "Your progress has been saved.");
 }
-
 // POPUP
 function showPopup(title, message) {
   document.getElementById("popupTitle").innerText = title;
