@@ -1,0 +1,606 @@
+/* ================= BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+body {
+  background: #eef2f1;
+}
+
+/* CONTAINER */
+.container {
+  display: block;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  display: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* USER */
+.user {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.user img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.user small {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* NAVIGATION */
+nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 12px;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  color: #d8e7e2;
+  transition: 0.2s;
+}
+
+nav a.active {
+  background: #e8efec;
+  color: #083b2c;
+}
+
+nav a:hover {
+  background: #0f5a42;
+}
+
+/* BADGE */
+.badge {
+  margin-left: auto;
+  background: #ffa726;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 12px;
+}
+
+/* BOTTOM LINKS */
+.bottom a {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  color: #d8e7e2;
+  border-radius: 8px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.bottom a:hover {
+  background: rgba(255, 255, 255, 0.1); /* subtle hover */
+  color: #fff;
+  cursor: pointer;
+}
+
+.logout {
+  color: #ff3b30 !important;
+  font-weight: 700;
+}
+
+/* MAIN */
+.main {
+  padding: 15px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  width: 100%;
+  gap: 8px;
+  border: 1px solid #e1e5e4;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.icons i {
+  margin-left: 10px;
+  font-size: 18px;
+  color: #777;
+}
+
+/* WELCOME */
+.welcome {
+  background: linear-gradient(135deg, #1aa05d, #0f7a4a);
+  color: #fff;
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+.welcome h1 {
+  font-size: 18px;
+}
+
+.welcome p {
+  font-size: 13px;
+}
+
+/* TOP COURSES */
+.top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.top-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top-card img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* TAG */
+.tag {
+  font-size: 11px;
+  background: #e3f6ea;
+  color: #1aa05d;
+  padding: 3px 8px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+/* META & PROGRESS */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #666;
+}
+
+.progress {
+  height: 5px;
+  background: #e5e9e8;
+  border-radius: 10px;
+  margin: 6px 0;
+}
+
+.progress div {
+  height: 100%;
+  width: 68%;
+  background: #1aa05d;
+  border-radius: 10px;
+}
+
+.top-info button {
+  background: #1aa05d; /* Continue learning / Enroll Now color */
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* COURSES GRID */
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-top {
+  background: #0c1020;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-top img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.card-body {
+  padding: 12px;
+}
+
+.label {
+  font-size: 10px;
+  background: #eef2f1;
+  padding: 3px 6px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.rating {
+  font-size: 12px;
+  color: #f5a623;
+  margin: 8px 0;
+}
+
+.card-body button {
+  width: 100%;
+  padding: 8px;
+  background: #1aa05d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+}
+
+/* LOWER SECTIONS */
+.lower {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.community-card {
+  background: #f3f5f4;
+  border-radius: 16px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-left {
+  display: flex;
+  gap: 10px;
+}
+
+.community-icon {
+  width: 45px;
+  height: 45px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.join-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  background: #fff;
+}
+
+.live-badge {
+  align-self: flex-end;
+  background: #e6f4ea;
+  color: #1c8c5e;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* ================= ACHIEVEMENTS ================= */
+.icons-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+}
+
+.icon-box i {
+  font-size: 24px;
+}
+
+.icon-box.green i {
+  color: #1aa05d;
+}
+.icon-box.orange i {
+  color: #f59e0b;
+}
+.icon-box.blue i {
+  color: #4f6df5;
+}
+.icon-box.teal i {
+  color: #10b981;
+}
+
+.icon-box.more {
+  background: #f7f7f7;
+  border: 1px dashed #ccc;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+}
+
+/* ================= PROGRESS ================= */
+.progress-section {
+  background: #fff;
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+.progress-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.progress-circle {
+  width: 110px;
+  height: 110px;
+}
+
+.progress-circle .circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#1aa05d 0% 72%, #d9d9d9 72%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.progress-circle .circle::before {
+  content: "";
+  width: 75px;
+  height: 75px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.progress-circle span {
+  position: relative;
+  font-size: 18px;
+}
+
+/* Stats horizontal, beside circle */
+.stats {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 12px 15px;
+  border-radius: 10px;
+  background: #c7e9d5; /* default color */
+  font-size: 12px;
+}
+
+/* Make total learning time green */
+.stat-box.total {
+  background: #1aa05d !important;
+  color: #fff !important;
+}
+
+/* ================= RECENT ACTIVITY ================= */
+.box {
+  background: #f5f7f6;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.activities .activity {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e1e5e4;
+}
+
+.activities .activity:last-child {
+  border-bottom: none;
+}
+
+.activities .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.activities .green {
+  color: #1aa05d;
+  font-weight: 600;
+}
+
+.achievements .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+  }
+
+  .sidebar {
+    display: flex;
+    width: 260px;
+    background: #0b3d2e;
+    color: #fff;
+    padding: 20px 18px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .community-card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .progress-wrapper {
+    flex-wrap: nowrap;
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1024px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .lower {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .main {
+    padding: 25px;
+  }
+}
+
+/* MOBILE SIDEBAR TOGGLE */
+.menu-toggle {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.sidebar.active {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1000;
+}
+
+.sidebar.active::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 260px;
+  width: calc(100% - 260px);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* ================= SIDEBAR LINKS SEPARATORS ================= */
+
+/* Add bottom border after specific links */
+.sidebar nav a:nth-child(2),
+.sidebar nav a:nth-child(3),
+.sidebar nav a:nth-child(4),
+.sidebar nav a:nth-child(5) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 12px; /* optional: give space for the line */
+  margin-bottom: 6px; /* keep spacing consistent */
+}
+
+/* Bottom links (Settings before Logout) */
+.bottom a:nth-child(2) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 6px;
+}
+
+/* ================= SIDEBAR OVERLAY ================= */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 900;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}

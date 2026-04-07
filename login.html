@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Protechniks">
+    <meta name="description" content="Login Page For TalentHub, a Learning Management Software (LMS) built to educate and train individuals on the Trueminds platform.">
+    <title>TalentHub, a subsidiary of the Trueminds Innovations Limited</title>
+    <link rel="stylesheet" href="css/login.css">
+  </head>
+
+  <body>
+    <main class="account">
+
+      <!-- START OF SIDE BAR HTML -->
+
+      <section class="side__details">
+       <div class="logo">
+          <img src="images/logo/TalentHubLogo1.jpeg" alt="Talent Flow Logo">
+          <h1>TalentHub</h1>
+        </div>
+        <h2>“Learn smarter. Build skills. Track your progress.”</h2>
+        <h3>Programming, Design, Development...</h3>
+      </section>
+
+      <!-- END OF SIDE BAR HTML -->
+
+      <!-- START OF USER DETAILS -->
+
+      <section class="user__details">
+        <img class="img" src="images/logo/TalentHubLogo1.jpeg" alt="Talent Flow Logo">
+        <h1>TalentHub</h1>
+        <h2>Welcome Back to TalentHub</h2>
+        <h3>Build your Skill and collaborate with your Peers</h3>
+
+        <form action="https://httpbin.org/post" method="post">
+          <label for="email"></label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your E-Mail or Unique ID"
+            autocomplete="on"
+            required>
+          <label for="password"></label>
+          <input
+            class="password"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Your Password"
+            required>
+          
+          <a class="forgot" href="password.html">Forgot Password?</a>
+
+<div class="remember">
+          <h4>Remember my sign in details <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label></h4>         
+</div>
+          <button class="button" type="submit">Log In</button>
+        </form>
+
+        <span class="lines">OR</span>
+        <p class="socials">
+          <img
+            src="images/login-images/googleimage.png"
+            alt="Google Logo Image"><a href="google.com" target="_blank">Sign up with Google</a>
+        </p>
+        <p class="socials">
+          <img
+            src="images/login-images/slackimage.png"
+            alt="Slack Logo Image"><a href="slack.com" target="_blank">Sign up with Slack</a>
+        </p>
+        <h5>
+          Don't have an account?<a class="Log" href="account.html">Sign Up</a>
+        </h5>
+      </section>
+
+       <!-- END OF USER DETAILS -->
+
+    </main>
+  </body>
+</html>

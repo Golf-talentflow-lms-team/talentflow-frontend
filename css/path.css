@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap");
+
+/* ||RESET */
+
+*,
+*:hover,
+*:focus,
+*:visited,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--BG-COLOR);
+  font-family: "Inter", sans-serif;
+  font-size: var(--FS--LARGE);
+  letter-spacing: 0px;
+  line-height: 120px;
+}
+
+/* END OF RESET */
+
+/* ||VARIABLES */
+
+:root {
+  /* COLORS */
+
+  --TXT-COLOR: #ffffff;
+  --SEC-TXT-COLOR: #666666;
+  --TERT-TXT-COLOR: #a6a6a6;
+  --BG-COLOR: #fcfefd;
+  --BG-HIGHLIGHT-COLOR: #e9fbf2;
+  --FOCUS-COLOR: #05ab5b;
+  --HOVER-COLOR: #048f4c;
+  --MAIN-COLOR: #05ab5b;
+  --VISITED-COLOR: #03743d;
+
+  /* FONTS */
+
+  --FS--LARGE: 16px;
+  --FS-BTN-LARGE: 16px;
+  --FS-BTN-MEDIUM: 14px;
+  --FS-BTN-SMALL: 12px;
+  --FS-HEADINGS: 24px;
+  --FS-INPUT: 14px;
+  --FS-MEDIUM: 14px;
+  --FS-PLACEHOLDER: 12px;
+  --FS-SECTIONS: 20px;
+  --FS-SMALL: 12px;
+  --FS-SUBSECTIONS: 16px;
+}
+
+/* || END OF VARIABLES */
+
+/* START OF SIDE BAR CSS */
+
+.side__details {
+  display: none;
+}
+
+/* END OF SIDE BAR CSS */
+
+/* USER DETAILS CSS */
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.path {
+  height: 692px;
+  line-height: 50px;
+  margin-top: 35px;
+  text-align: center;
+  width: 436px;
+}
+
+.path img {
+  height: 80px;
+  margin-bottom: -20px;
+  margin-left: 10px;
+  text-align: center;
+  width: 80px;
+}
+
+.path h1 {
+  color: var(--VISITED-COLOR); 
+  margin-bottom: 20px;
+}
+
+.path h2 {
+  color: #1a1a1a;
+  font-size: 32px;
+  font-weight: 590;
+  margin-top: 40px;
+}
+
+.path h3 {
+  color: var(--SEC-TXT-COLOR);
+  font-size: var(--FS--LARGE);
+  font-weight: 400;
+  text-align: center;
+}
+
+select {
+  border-radius: 8px;
+  border-width: 1px;
+  border: 1px solid hsla(0, 0%, 65%, 0.25);
+  box-shadow: 0px 0px 4px 0px hsla(0, 0%, 0%, 0.1);
+  height: 40px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  text-align: center;
+  width: 436px;
+}
+
+.select {
+  border: 1px solid var(--MAIN-COLOR);
+}
+
+.button {
+  background-color: var(--MAIN-COLOR);
+  border-radius: 8px;
+  border: none;
+  color: var(--TXT-COLOR);
+  cursor: pointer;
+  height: 40px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 12px;
+  width: 436px;
+}
+
+.button:hover {
+  background-color: var(--HOVER-COLOR);
+}
+
+.button:active {
+  background-color: var(--VISITED-COLOR);
+}
+
+/* END OF USER DETAILS CSS */
+
+/* MOBILE MEDIA QUERIES */
+
+@media screen and (max-width: 472px) {
+  select,
+  .button {
+    width: 95%;
+    text-align: center;
+  }
+
+  .path h2 {
+    text-align: center;
+  }
+
+  .path h3 {
+    text-align: center;
+  }
+}
+
+/*  END OF MOBILE MEDIA QUERIES */
+
+/*  DESKTOP MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+
+  .logo img {
+    height: 60px;
+    width: 60px;
+    margin-left: -19px;
+  }
+
+  .path{
+    padding-bottom: 1000px;
+  }
+
+  .path img{
+    display: none;
+  }
+  
+
+  .path h1 {
+    display: none;
+  }
+
+  .path h2{
+    font-weight: 700;
+  }
+
+  .side__details {
+    background-image: url(../images/path-images/sidebarimage.png);
+    background-size: cover;
+    color: var(--TXT-COLOR);
+    display: flex;
+    flex-direction: column;
+    height: 1366px;
+    line-height: 65px;
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 480px;
+  }
+
+  .side__details h1 {
+    color: var(--VISITED-COLOR);
+    font-size: var(--FS-HEADINGS);
+    font-weight: 600;
+    margin-left: 45px;
+    margin-top: -89px;
+  }
+
+  .side__details h2 {
+    color: var(--TXT-COLOR);
+    font-size: 32px;
+    font-weight: 100;
+    line-height: 40px;
+    margin-top: 1115px;
+  }
+
+  .side__details h3 {
+    color: var(--TXT-COLOR);
+    font-size: var(--FS--LARGE);
+    font-weight: 500;
+    opacity: 0.75;
+    margin-top: 7px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .path {
+    margin: auto;
+    text-align: center;
+  }
+  select,
+  .button {
+    width: 95%;
+    text-align: center;
+  }
+}
+
+/*  END OF DESKTOP MEDIA QUERIES */
