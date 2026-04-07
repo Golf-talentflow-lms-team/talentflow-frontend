@@ -814,8 +814,30 @@ a {
 .achievement-wrapper {
     display: flex;
     align-items: center;
-    /* gap: 10px; */
-    margin: 0 20px 25px;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 20px 25px;
+}
+.achievement-icon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+}
+.green {
+    background: #05ab5b;
+}
+.gray {
+    background: gray;
+}
+.red {
+    background: #ff0000;
+}
+.brown {
+    background: brown;
 }
 .achievement-progress-content {
         width: 100%;
