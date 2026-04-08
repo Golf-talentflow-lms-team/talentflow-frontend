@@ -19,7 +19,8 @@ if (localStorage.getItem('hamState') === 'close') {
 hamburger.addEventListener('click', () => {
         mobileSideNav.classList.remove('hidden');
         localStorage.setItem('hamState', 'open');
-         isNavCollapsed = !isNavCollapsed;
+        
+isNavCollapsed = !isNavCollapsed;
 });
 
 

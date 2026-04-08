@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentHub Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div>
+                <div class="logo">
+                    <img src="logo.png" width="35">
+                    <span>TalentHub</span>
+                </div>
+
+                <div class="user">
+                    <img src="https://i.pravatar.cc/100">
+                    <div>
+                        <p>Ezekiel Moyinoluwa</p>
+                        <small>ID: CAR123456</small>
+                    </div>
+                </div>
+
+                <nav>
+                    <a class="active"><i class="ri-dashboard-line"></i>Dashboard</a>
+                    <a><i class="ri-book-line"></i>Explore Courses</a>
+                    <a><i class="ri-play-line"></i>Lessons <span class="badge">2</span></a>
+                    <a><i class="ri-file-line"></i>Assignments <span class="badge">2</span></a>
+                    <a><i class="ri-chat-3-line"></i>Discussion</a>
+                    <a><i class="ri-bar-chart-line"></i>Progress</a>
+                </nav>
+            </div>
+
+            <div class="bottom">
+                <a><i class="ri-question-line"></i>Help & Support</a>
+                <a><i class="ri-settings-3-line"></i>Settings</a>
+                <a class="logout"><i class="ri-logout-box-line"></i>Logout</a>
+            </div>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <!-- HEADER -->
+            <div class="header">
+                <i class="ri-menu-line menu-toggle"></i>
+                <div class="search">
+                    <i class="ri-search-line"></i>
+                    <input placeholder="Search">
+                </div>
+                <div class="icons">
+                    <i class="ri-mic-line"></i>
+                    <i class="ri-notification-3-line"></i>
+                </div>
+            </div>
+
+            <!-- WELCOME -->
+            <div class="welcome">
+                <h1>Welcome Back, Moyinoluwa!</h1>
+                <p>You have 2 submissions to review and 2 pending tasks</p>
+            </div>
+
+            <!-- TOP COURSES -->
+            <div class="top">
+                <div class="top-card">
+                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e">
+                    <div class="top-info">
+                        <span class="tag">In Progress</span>
+                        <h3>Advanced UI/UX Design Principles</h3>
+                        <p>Master the psychology of user interfaces and high-end editorial layouts</p>
+
+                        <div class="meta">
+                            <span>68% COMPLETE</span>
+                            <span>Lesson 4 of 12</span>
+                        </div>
+
+                        <div class="progress">
+                            <div></div>
+                        </div>
+
+                        <br>
+                        <button>Continue Learning</button>
+                    </div>
+                </div>
+
+                <div class="top-card">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
+                    <div class="top-info">
+                        <span class="tag">In Progress</span>
+                        <h3>Advanced UI/UX Design Principles</h3>
+                        <p>Master the psychology of user interfaces and high-end editorial layouts</p>
+
+                        <div class="meta">
+                            <span>68% COMPLETE</span>
+                            <span>Lesson 4 of 12</span>
+                        </div>
+
+                        <div class="progress">
+                            <div></div>
+                        </div>
+
+                        <br>
+                        <button>Continue Learning</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COURSES -->
+            <div class="section">
+                <h3>My Courses</h3>
+                <small>View All</small>
+            </div>
+
+            <div class="grid">
+                <!-- repeat card -->
+                <div class="card">
+                    <div class="card-top">
+                        <img src="figma.png" alt="Figma Logo">
+                    </div>
+                    <div class="card-body">
+                        <span class="label">Design</span>
+                        <h4>Figma for Beginners: Fundamentals of Figma</h4>
+                        <small>A Course by Richardino Guevara</small>
+                        <div class="rating">⭐ 4.5 (223) • Beginner</div>
+                        <button>Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <img src="figma.png" alt="Figma Logo">
+                    </div>
+                    <div class="card-body">
+                        <span class="label">Design</span>
+                        <h4>Figma for Beginners: Fundamentals of Figma</h4>
+                        <small>A Course by Richardino Guevara</small>
+                        <div class="rating">⭐ 4.5 (223) • Beginner</div>
+                        <button>Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <img src="figma.png" alt="Figma Logo">
+                    </div>
+                    <div class="card-body">
+                        <span class="label">Design</span>
+                        <h4>Figma for Beginners: Fundamentals of Figma</h4>
+                        <small>A Course by Richardino Guevara</small>
+                        <div class="rating">⭐ 4.5 (223) • Beginner</div>
+                        <button>Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOWER -->
+            <div class="lower">
+
+                <!-- LEFT -->
+                <section class="learning-community">
+                    <h2>Learning Community</h2>
+
+                    <div class="community-card">
+                        <div class="card-left">
+                            <div class="community-icon">👥</div>
+
+                            <div class="card-content">
+                                <h3>UI Design Sync</h3>
+                                <span class="tag">LIVE WORKSHOP</span>
+                                <br>
+                                <p>Join the community review session for the typography lesson assignments</p>
+                                <br>
+                                <button class="join-btn">Join Meeting</button>
+                            </div>
+                        </div>
+
+                        <span class="live-badge">Live Now</span>
+                    </div>
+
+                    <div class="community-card">
+                        <div class="card-left">
+                            <div class="community-icon">👥</div>
+
+                            <div class="card-content">
+                                <h3>UI Design Sync</h3>
+                                <span class="tag">LIVE WORKSHOP</span>
+                                <br>
+                                <p>Join the community review session for the typography lesson assignments</p>
+                                <br>
+                                <button class="join-btn">Join Meeting</button>
+                            </div>
+                        </div>
+
+                        <span class="live-badge">Live Now</span>
+                    </div>
+                </section>
+
+                <!-- RIGHT -->
+                <div class="box">
+                    <h3>Recent Activity</h3>
+
+                    <!-- Activities -->
+                    <div class="activities">
+                        <div class="activity">
+                            <div class="row">
+                                <span class="green">NEW CONTENT</span>
+                                <span>1hr ago</span>
+                            </div>
+                            <br>
+                            <p>Prototyping Advanced Animations Lesson is now available.</p>
+                        </div>
+
+                        <br>
+                        <div class="activity">
+                            <div class="row">
+                                <span class="green">COURSE UPDATE</span>
+                                <span>1hr ago</span>
+                            </div>
+                            <br>
+                            <p>Your assignment for Color Theory has been graded!</p>
+                        </div>
+                    </div>
+
+                    <!-- Achievements -->
+                    <div class="achievements">
+                        <div class="row">
+                            <h4>Achievements</h4>
+                            <small>View All</small>
+                        </div>
+
+                        <div class="icons-row">
+                            <div class="icon-box green">
+                                <i class="ri-trophy-fill"></i>
+                            </div>
+
+                            <div class="icon-box orange">
+                                <i class="ri-flashlight-fill"></i>
+                            </div>
+
+                            <div class="icon-box blue">
+                                <i class="ri-star-fill"></i>
+                            </div>
+
+                            <div class="icon-box teal">
+                                <i class="ri-medal-fill"></i>
+                            </div>
+
+                            <div class="icon-box more">+12</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROGRESS -->
+                <div class="progress-section">
+                    <h3>Progress Statistics</h3>
+
+                    <br>
+                    <div class="progress-wrapper">
+
+                        <!-- Circle -->
+                        <div class="progress-circle">
+                            <div class="circle">
+                                <span>72%</span>
+                            </div>
+                        </div>
+
+                        <!-- Stats (Side by Side) -->
+                        <div class="stats">
+                            <div class="stat-box">Completed<br><br><b>08 Courses</b></div>
+                            <div class="stat-box">Streak<br><br><b>14 Days</b></div>
+                            <div class="stat-box total">Total Learning Time<br><br><b>14 Days</b></div>
+                        </div>
+
+                    </div>
+                </div>
+
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

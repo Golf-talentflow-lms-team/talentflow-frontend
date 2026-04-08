@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap");
+
+/* ||RESET */
+
+*,
+*:hover,
+*:focus,
+*:visited,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--BG-COLOR);
+  font-family: "Inter", sans-serif;
+  font-size: var(--FS--LARGE);
+  letter-spacing: 0px;
+  line-height: 120px;
+}
+
+/* END OF RESET */
+
+/* ||VARIABLES */
+
+:root {
+  /* COLORS */
+
+  --TXT-COLOR: #ffffff;
+  --SEC-TXT-COLOR: #666666;
+  --TERT-TXT-COLOR: #a6a6a6;
+  --BG-COLOR: #fcfefd;
+  --BG-HIGHLIGHT-COLOR: #e9fbf2;
+  --FOCUS-COLOR: #05ab5b;
+  --HOVER-COLOR: #048f4c;
+  --MAIN-COLOR: #05ab5b;
+  --VISITED-COLOR: #03743d;
+
+  /* FONTS */
+
+  --FS--LARGE: 16px;
+  --FS-BTN-LARGE: 16px;
+  --FS-BTN-MEDIUM: 14px;
+  --FS-BTN-SMALL: 12px;
+  --FS-HEADINGS: 24px;
+  --FS-INPUT: 14px;
+  --FS-MEDIUM: 14px;
+  --FS-PLACEHOLDER: 12px;
+  --FS-SECTIONS: 20px;
+  --FS-SMALL: 12px;
+  --FS-SUBSECTIONS: 16px;
+}
+
+/* || END OF VARIABLES */
+
+/* SIDE BAR CSS */
+
+.side__details {
+  display: none;
+}
+
+/* END OF SIDE BAR CSS */
+
+/* USER DETAILS CSS */
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.user__details {
+  height: 692px;
+  line-height: 50px;
+  margin-top: 35px;
+  text-align: center;
+  width: 436px;
+}
+
+.user__details .img {
+  height: 80px;
+  margin-bottom: -20px;
+  margin-left: 10px;
+  text-align: center;
+  width: 80px;
+}
+
+.user__details h1 {
+  color: var(--VISITED-COLOR); 
+  margin-bottom: 20px;
+}
+
+.user__details h2 {
+  color: #1a1a1a;
+  font-size: 32px;
+  font-weight: 590;
+  margin-top: 40px;
+}
+
+.user__details h3 {
+  color: var(--SEC-TXT-COLOR);
+  font-size: var(--FS--LARGE);
+  font-weight: 400;
+  text-align: center;
+}
+
+input {
+  border-radius: 8px;
+  border-width: 1px;
+  border: 1px solid hsla(0, 0%, 65%, 0.25);
+  box-shadow: 0px 0px 4px 0px hsla(0, 0%, 0%, 0.1);
+  height: 40px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  text-align: center;
+  width: 436px;
+}
+
+.password {
+  border: 1px solid var(--MAIN-COLOR);
+}
+
+.button {
+  background-color: var(--MAIN-COLOR);
+  border-radius: 8px;
+  border: none;
+  color: var(--TXT-COLOR);
+  cursor: pointer;
+  height: 40px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 12px;
+  text-align: center;
+  width: 436px;
+}
+
+.button:hover {
+  background-color: var(--HOVER-COLOR);
+}
+
+.button:active {
+  background-color: var(--VISITED-COLOR);
+}
+
+.lines {
+  align-items: center;
+  color: var(--TERT-TXT-COLOR);
+  display: flex;
+  font-size: 10px;
+  font-style: Medium;
+  font-weight: 500;
+  text-align: center;
+}
+
+.lines::before,
+.lines::after {
+  border-bottom: 1px solid #ccc;
+  content: "";
+  flex: 1;
+  margin: 0 1px;
+  text-align: center;
+}
+
+.socials {
+  align-items: center;
+  display: flex;
+}
+
+.user__details p {
+  background-color: rgba(5, 171, 91, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: var(--FS-SMALL);
+  font-weight: 600;
+  height: 48px;
+  margin-top: 12px;
+  padding-left: 123px;
+  padding-right: 124px;
+  white-space: nowrap;
+  width: 436px;
+}
+
+.user__details img {
+  height: 20px;
+  margin-right: 10px;
+  width: 20px;
+}
+
+.user__details a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.user__details h4 {
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+}
+
+.user__details h4 > a {
+  margin-left: 5px;
+  color: var(--MAIN-COLOR);
+}
+
+/*  END OF USER DETAILS CSS */
+
+/* SIDE BAR MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+
+  .user__details h1 {
+    display: none;
+  }
+
+  .logo img {
+    height: 60px;
+    width: 60px;
+    margin-left: -19px;
+  }
+
+   main {
+    display: flex;
+    justify-content: center;
+  }
+
+  .side__details {
+    background-image: url(../images/account-images/sidebarimage.png);
+    background-size: cover;
+    color: var(--TXT-COLOR);
+    display: flex;
+    flex-direction: column;
+    height: 1366px;
+    line-height: 65px;
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 480px;
+  }
+
+  .side__details h1 {
+    color: var(--VISITED-COLOR);
+    font-size: var(--FS-HEADINGS);
+    font-weight: 600;
+    margin-left: -15px;
+    margin-top: -62px;
+  }
+
+  .side__details h2 {
+    color: var(--TXT-COLOR);
+    font-size: 32px;
+    font-weight: 100;
+    line-height: 40px;
+    margin-top: 1115px;
+  }
+
+  .side__details h3 {
+    color: var(--TXT-COLOR);
+    font-size: var(--FS--LARGE);
+    font-weight: 500;
+    opacity: 0.75;
+    margin-top: 7px;
+  }
+}
+
+/* END OF SIDE BAR MEDIA QUERIES */
+
+/* MOBILE MEDIA QUERIES */
+
+@media screen and (max-width: 480px) {
+ input,
+  .button{
+    width: 90%;
+    text-align: center;
+  }
+
+ span{
+    text-align: center;
+    width: 80%;
+    margin-left: 40px;
+  }
+
+  .user__details{
+    text-align: center;
+  }
+
+  .user__details p{
+    text-align: center;
+    width: 90%;
+    margin-left: 25px;
+  }
+
+}
+
+@media  screen and (max-width: 410px) {
+
+  .user__details{
+    margin-left: 40px;
+  }
+  
+}
+
+/* END OF MOBILE MEDIA QUERIES */
+
+/* DESKTOP MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+
+  .side__details h2{
+    margin-top: 1050px;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    width: 80px;
+  }
+
+  .logo img{
+    margin-top: -2px;
+  }
+
+  .logo h1{
+    padding-left: 60px;
+    padding-top: -10px;
+  }
+
+  span{
+    width: 90%;
+    margin-left: 22px;
+  }
+
+  .user__details{
+    padding-bottom: 1000px;
+  }
+
+  .user__details img{
+    display: none;
+  }
+
+  .user__details p{
+    width: 90%;
+    margin-left: 20px;
+  }
+  
+
+  .user__details h1 {
+    display: none;
+  }
+
+  .user__details h2{
+    font-weight: 700;
+  }
+
+
+  .user__details {
+    margin: auto;
+    text-align: center;
+  }
+
+  input,
+  .button {
+    text-align: center;
+    width: 95%;
+  }
+  
+}
+
+@media screen and (min-width: 960px){
+  input, .button, span, .user__details p{
+    text-align: center;
+    width: 100%;
+  }
+
+  span, .user__details p{
+    margin-left: 0px;
+  }
+}
+
+/*  END OF DESKTOP MEDIA QUERIES */
