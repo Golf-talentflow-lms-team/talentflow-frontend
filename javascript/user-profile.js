@@ -1,4 +1,39 @@
 
+
+const mobileSideNav = document.getElementById('mobileSideNav');
+const hamburger = document.getElementById('hamburger');
+const closeHamburger = document.getElementById('closeHamburger');
+
+let isNavCollapsed = true;
+
+if (localStorage.getItem('hamState') === 'open') {
+        mobileSideNav.classList.remove('hidden');
+        isNavCollapsed = true;
+}
+
+if (localStorage.getItem('hamState') === 'close') {
+        mobileSideNav.classList.add('hidden');
+         isNavCollapsed = true;
+}
+
+hamburger.addEventListener('click', () => {
+        mobileSideNav.classList.remove('hidden');
+        localStorage.setItem('hamState', 'open');
+         isNavCollapsed = !isNavCollapsed;
+});
+
+
+  closeHamburger.addEventListener('click', () => {
+        mobileSideNav.classList.add('hidden');
+        localStorage.setItem('hamState', 'close');
+
+ isNavCollapsed = !isNavCollapsed;
+  }); 
+
+
+
+
+
     const sideNav = document.getElementById('sideNav');
     const smallNav = document.getElementById('smallNav');
     const bigNav = document.getElementById('bigNav');

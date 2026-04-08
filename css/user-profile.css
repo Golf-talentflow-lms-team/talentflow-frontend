@@ -883,6 +883,20 @@ a {
     display:none;
 }
 
+.mobile-sidenav {
+    background: #012816;
+    width: 50%;
+    height: 100vh;
+    z-index: 999;
+    position: fixed;
+    display: none;
+
+}
+ #closeHamburger {
+position:relative;
+left: 180px;
+top: 20px;
+}
 
 @media (max-width: 768px) {
 #sideNav {
@@ -900,10 +914,13 @@ display: block;
     width: 0;
 }
 
-
+.mobile-sidenav {
+    display: block;
+}
 .main-container {
     width: 100%;
     left: 10px;
+    z-index: 0;
 }
 .header {
     background: none;
