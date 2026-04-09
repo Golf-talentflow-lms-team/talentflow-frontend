@@ -101,7 +101,11 @@
             <div class="main-top">
 
                 <div class="top-left">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"/></svg>
+                    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"/>
+                        </svg>
+                    </button>
 
                     <div class="search-bar">
                         <i class="ph ph-magnifying-glass"></i>
@@ -578,7 +582,8 @@
                 </div>
             </div>  
 
-        </div>    
+        </div> 
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>   
     </main>
     <script src="javascript/tabs.js"></script>
 </body>

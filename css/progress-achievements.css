@@ -683,3 +683,754 @@
     justify-content: center;
     border-radius: 50%;
 }
+
+/* Responsive */
+
+/* ── SHARED: Overlay & Hamburger base styles ── */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+}
+
+.sidebar-overlay.open {
+  display: block;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-text);
+  padding: 4px;
+}
+
+
+/* Mobile View */
+@media (min-width: 320px) and (max-width: 480px) {
+
+  /* Layout */
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Sidebar drawer */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 260px;
+    height: 100vh;
+    z-index: 99;
+    transition: left 0.3s ease;
+    padding: 20px 0;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar-bottom {
+    position: static;
+  }
+
+  .nav-link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-right: none;
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+  .nav-link:hover,
+  .nav-link.activated {
+    border-right: 4px solid var(--main);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  /* Top bar */
+  .main-top {
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    background: #fff;
+    padding: 12px 14px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .search-bar {
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+    width: 80px;
+  }
+
+  .continue-lesson {
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  /* ── Progress Page ── */
+  .main-middle {
+    padding: 14px;
+  }
+
+  .main-middle h1 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .main-middle > p {
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+
+  /* All cards stacked single column */
+  .main-middle-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .card-progress,
+  .card-streak,
+  .card-courses,
+  .card-chart,
+  .card-achieve {
+    grid-column: 1 / 2;
+    grid-row: auto;
+  }
+
+  /* Progress card: horizontal layout */
+  .card-progress {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .progress-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  .grid-text h2 {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .grid-text p {
+    font-size: 11px;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  /* Streak card: horizontal */
+  .card-streak {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    justify-content: flex-start;
+  }
+
+  .card-streak .grid-image img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .streak-text h2 {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .streak-text p {
+    font-size: 11px;
+    text-align: left;
+    margin-bottom: 0;
+    color: #fff;
+  }
+
+  /* Courses card: horizontal */
+  .card-courses {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    justify-content: flex-start;
+  }
+
+  .card-courses .grid-image img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .card-courses .grid-text h2 {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .card-courses .grid-text p {
+    font-size: 11px;
+    text-align: left;
+    margin-bottom: 4px;
+  }
+
+  /* Chart card */
+  .card-chart {
+    padding: 14px;
+  }
+
+  .card-chart_text h2 {
+    font-size: 16px;
+  }
+
+  /* Achievements mini card */
+  .card-achieve {
+    padding: 14px;
+  }
+
+  .card-achieve_icons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .icon-image {
+    width: 65px;
+    height: 65px;
+    border-radius: 14px;
+  }
+
+  .icon-image-inside {
+    width: 38px;
+    height: 38px;
+  }
+
+  .icon-item p {
+    font-size: 9px;
+    text-align: center;
+  }
+
+  /* ── Achievements Page ── */
+  .main-achievements {
+    padding: 14px;
+    gap: 14px;
+  }
+
+  .main-achievements_text h2 {
+    font-size: 20px;
+  }
+
+  .main-achievements_text p {
+    font-size: 11px;
+  }
+
+  .tabs {
+    padding: 10px 12px;
+    gap: 8px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .tab {
+    font-size: 12px;
+    padding: 8px 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .content.active {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  #progress.content.active {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .icon-text h2 {
+    font-size: 13px;
+  }
+
+  .icon-text p {
+    font-size: 10px;
+  }
+
+  .icon-earned a {
+    font-size: 10px;
+  }
+
+  .progress-card {
+    padding: 14px;
+    gap: 16px;
+  }
+
+  .progress-card .card-body h3 {
+    font-size: 15px;
+  }
+
+  .progress-card .card-body p {
+    font-size: 12px;
+  }
+}
+
+
+/* Tablet View */
+@media (min-width: 481px) and (max-width: 1024px) {
+
+  /* Layout */
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  
+
+  /* Hamburger */
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Sidebar drawer */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    z-index: 99;
+    transition: left 0.3s ease;
+    padding: 20px 0;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar-bottom {
+    position: static;
+  }
+
+  .nav-link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-right: none;
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+
+  .nav-link:hover,
+  .nav-link.activated {
+    border-right: 4px solid var(--main);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  /* Top bar */
+  .main-top {
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    background: #fff;
+    padding: 14px 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  }
+
+  .search-bar input {
+    width: 160px;
+    font-size: 16px;
+  }
+
+  .continue-lesson {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  /* ── Progress Page ── */
+  .main-middle {
+    padding: 20px;
+  }
+
+  .main-middle h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .main-middle > p {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  /* 2-column grid */
+  .main-middle-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .card-progress  { grid-column: 1 / 2; grid-row: 1 / 2; }
+  .card-streak    { grid-column: 2 / 3; grid-row: 1 / 2; }
+  .card-courses   { grid-column: 1 / 3; grid-row: 2 / 3; flex-direction: row; align-items: center; gap: 20px; justify-content: center; }
+  .card-chart     { grid-column: 1 / 3; grid-row: 3 / 4; }
+  .card-achieve   { grid-column: 1 / 3; grid-row: 4 / 5; }
+
+  .progress-circle {
+    width: 100px;
+    height: 100px;
+    font-size: 18px;
+  }
+
+  .grid-text h2 {
+    font-size: 20px;
+  }
+
+  /* Achievements mini grid: 5 columns */
+  .card-achieve_icons {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+
+  .icon-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon-image-inside {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon-item p {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  /* ── Achievements Page ── */
+  .main-achievements {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .main-achievements_text h2 {
+    font-size: 26px;
+  }
+
+  .tabs {
+    padding: 14px 16px;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .tab {
+    font-size: 14px;
+    padding: 12px 16px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* 3-column grid on tablet */
+  .content.active {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  #progress.content.active {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .icon-text h2 {
+    font-size: 15px;
+  }
+
+  .icon-text p {
+    font-size: 12px;
+  }
+
+  .progress-card {
+    padding: 18px;
+    gap: 24px;
+  }
+}
+
+
+/* Laptop View */
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+  /* Full sidebar visible */
+  .hamburger {
+    display: none !important;
+  }
+
+  .sidebar-overlay {
+    display: none !important;
+  }
+
+  .main {
+    grid-template-columns: 2fr 10fr;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    left: auto;
+    width: auto;
+    height: 100vh;
+    transition: none;
+    overflow-y: auto;
+  }
+
+  .sidebar-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .nav-link {
+    padding: 16px 18px;
+    font-size: 14px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: none;
+  }
+
+  .nav-link:hover,
+  .nav-link.activated {
+    border-right: 4px solid var(--main);
+  }
+
+  .sidebar-logo {
+    font-size: 20px;
+  }
+
+  .user-name {
+    font-size: 14px;
+  }
+
+  .user-id {
+    font-size: 12px;
+  }
+
+  /* Top bar */
+  .main-top {
+    padding: 16px 20px;
+  }
+
+  .search-bar input {
+    width: 200px;
+  }
+
+  /* ── Progress Page ── */
+  .main-middle {
+    padding: 20px;
+  }
+
+  .main-middle h1 {
+    font-size: 28px;
+  }
+
+  /* 3-column grid */
+  .main-middle-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+  }
+
+  .card-progress  { grid-column: 1 / 2; grid-row: 1 / 2; }
+  .card-streak    { grid-column: 2 / 3; grid-row: 1 / 2; }
+  .card-courses   { grid-column: 3 / 4; grid-row: 1 / 2; }
+  .card-chart     { grid-column: 1 / 3; grid-row: 2 / 3; }
+  .card-achieve   { grid-column: 3 / 4; grid-row: 2 / 3; }
+
+  .progress-circle {
+    width: 110px;
+    height: 110px;
+    font-size: 19px;
+  }
+
+  /* Achievements mini grid */
+  .card-achieve_icons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .icon-image {
+    width: 85px;
+    height: 85px;
+  }
+
+  .icon-image-inside {
+    width: 52px;
+    height: 52px;
+  }
+
+  /* ── Achievements Page ── */
+  .main-achievements {
+    padding: 20px;
+  }
+
+  .content.active {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  #progress.content.active {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tab {
+    font-size: 15px;
+    padding: 14px 18px;
+  }
+}
+
+
+/* Desktop View */
+@media (min-width: 1441px) {
+
+  /* Full sidebar */
+  .hamburger {
+    display: none !important;
+  }
+
+  .sidebar-overlay {
+    display: none !important;
+  }
+
+  .main {
+    grid-template-columns: 1.5fr 10fr;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    left: auto;
+    width: auto;
+    height: 100vh;
+    transition: none;
+  }
+
+  .sidebar-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .nav-link {
+    padding: 20px;
+    font-size: 16px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: none;
+  }
+
+  .nav-link:hover,
+  .nav-link.activated {
+    border-right: 4px solid var(--main);
+  }
+
+  /* Top bar */
+  .main-top {
+    padding: 20px 24px;
+  }
+
+  .search-bar input {
+    width: 240px;
+    font-size: 20px;
+  }
+
+  /* ── Progress Page ── */
+  .main-middle {
+    padding: 20px 24px;
+  }
+
+  .main-middle h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  /* Original 3-column grid */
+  .main-middle-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .card-progress  { grid-column: 1 / 2; grid-row: 1 / 2; }
+  .card-streak    { grid-column: 2 / 3; grid-row: 1 / 2; }
+  .card-courses   { grid-column: 3 / 4; grid-row: 1 / 2; }
+  .card-chart     { grid-column: 1 / 3; grid-row: 2 / 3; }
+  .card-achieve   { grid-column: 3 / 4; grid-row: 2 / 3; }
+
+  .progress-circle {
+    width: 120px;
+    height: 120px;
+    font-size: 20px;
+  }
+
+  /* Achievements mini grid */
+  .card-achieve_icons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .icon-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-image-inside {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* ── Achievements Page ── */
+  .main-achievements {
+    padding: 20px;
+  }
+
+  .content.active {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+
+  #progress.content.active {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tab {
+    font-size: 16px;
+    padding: 16px;
+  }
+}
