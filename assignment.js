@@ -119,15 +119,15 @@ function updateAssignmentBrief(assignmentId) {
     //const status = badge.textContent.trim();
 
     //if (status.includes('DONE')) {
-        //alert('✅ This assignment has already been submitted!');
+        //alert(' This assignment has already been submitted!');
     //} else {
-        //alert('📤 Opening assignment submission form...\n\nYou can now upload your files here.');
+        //alert(' Opening assignment submission form...\n\nYou can now upload your files here.');
     //}
 //}
 
 // Download resource
 function downloadResource(resourceName) {
-    alert(`📥 Downloading: ${resourceName}`);
+    alert(` Downloading: ${resourceName}`);
 }
 
 // Search functionality
@@ -188,7 +188,7 @@ document.getElementById("assignmentForm").addEventListener("submit", function (e
     return;
   }
 
-  // ✅ RESET FORM
+  // RESET FORM
   this.reset();
 
   // clear file name display
@@ -203,13 +203,13 @@ function saveDraft() {
   const file = document.getElementById("fileInput").files[0];
   const link = document.getElementById("linkInput").value.trim();
 
-  // ❌ If nothing is provided
+  //  If nothing is provided
   if (!file && !link) {
     showPopup("Error", "Please upload a file or provide a link before saving.");
     return;
   }
 
-  // ✅ If valid
+  //  If valid
   closeModal();
   showPopup("Draft Saved!", "Your progress has been saved.");
 }
