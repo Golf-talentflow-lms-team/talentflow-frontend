@@ -1033,15 +1033,15 @@
 
                     <div class="instructor-note">
                         <h4>Instructor Notes</h4>
-                        <textarea placeholder="Private instructor notes"></textarea>
+                        <textarea id="instructorNote" placeholder="Private instructor notes"></textarea>
 
                         <!--This is for the message sent successful message  -->                       
-                    <div class="message-modal-wrapper hidden">
+                    <div class="message-modal-wrapper hidden" id="msgPop">
                         <div class="message-modal">
 
                             <div class="check-wrapper">
                             <div class="modal-check">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" >
                                 <path fill="#fff" fill-rule="evenodd" d="M19.47 4.118a1 1 0 0 1 .412 1.353l-8 15a1 1 0 0 1-1.59.236l-6-6a1 1 0 1 1 1.415-1.414l5.046 5.046l7.365-13.81a1 1 0 0 1 1.353-.411" clip-rule="evenodd" />
                                 </svg>
                             </div>
@@ -1049,7 +1049,7 @@
                             </div>
 
                             <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" id="msgPopCancel" >
                             <path fill="none" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243" />
                             </svg>
                             </div>
@@ -1061,7 +1061,7 @@
                     </div>
 
                         <!--This is for the report export successful message  -->
-                    <div class="message-modal-wrapper hidden">
+                    <div class="message-modal-wrapper hidden" id="exportMsg">
                         <div class="message-modal">
 
                             <div class="check-wrapper">
@@ -1074,7 +1074,7 @@
                             </div>
 
                             <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" id="exportMsgCancel">
                             <path fill="none" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243" />
                             </svg>
                             </div>
@@ -1101,8 +1101,8 @@
             </div>
 
             <div class="export-message-btn">
-                <button>Export Report</button>
-                <button>Message to Students</button>
+                <button id="exportReport">Export Report</button>
+                <button id="msgStudent">Message to Students</button>
             </div>
 
         </div>
@@ -1112,5 +1112,6 @@
         </main>
 
 <script src="javascript/user-profile.js"></script>
+<script src="javascript/student-progress.js"></script>
 </body>
 </html>
