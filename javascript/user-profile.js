@@ -46,13 +46,15 @@ isNavCollapsed = !isNavCollapsed;
         if (savedState === 'collapsed' ) {
         bigNav.classList.add('hidden');
         smallNav.classList.remove('hidden');
-        mainContainer.style.width = '95%';
+         mainContainer.classList.add("collapsed");
+        // mainContainer.style.width = '95%';
         isCollapsed = true;
        }
        else {
         bigNav.classList.remove('hidden');
         smallNav.classList.add('hidden');
-        mainContainer.style.width = '85%';
+        mainContainer.classList.remove("collapsed");
+        // mainContainer.style.width = '85%';
         isCollapsed = true;
        }
     
@@ -61,13 +63,15 @@ isNavCollapsed = !isNavCollapsed;
        if (isCollapsed ) {
         bigNav.classList.add('hidden');
         smallNav.classList.remove('hidden');
-        mainContainer.style.width = '95%';
+        // mainContainer.style.width = '95%';
+       mainContainer.classList.add("collapsed");
         localStorage.setItem('navState', 'collapsed')
        }
        else {
         bigNav.classList.remove('hidden');
         smallNav.classList.add('hidden');
-        mainContainer.style.width = '85%';
+        mainContainer.classList.remove("collapsed");
+        // mainContainer.style.width = '85%';
         localStorage.setItem('navState', 'expand')
        }
 

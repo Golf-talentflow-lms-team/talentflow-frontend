@@ -30,7 +30,7 @@ button {
     height: 100vh;
     background: #012816;
     position: fixed;
-    width: 5%;
+    width: 80px;
 }
 .small-aside-container .logo {
     text-align: center;
@@ -61,7 +61,7 @@ button {
     border-radius: 50%;
     position: absolute;
     bottom: 15px;
-    left: 20px;
+    left: 30px;
 }
 .small-span span {
     font-size: 4px;
@@ -86,13 +86,15 @@ button {
     min-height: 100vh;
     background: #012816;
     position: fixed;
-    width: 15%;
+    width: 250px;
     display: flex;
     flex-direction: column;
     top: 0;
     left: 0;
     z-index: 200;
+    transition: .3s;
 }
+
 .logo {
     display: flex;
     align-items: center;
@@ -192,10 +194,16 @@ button {
 
 /* main section */
 .main-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 85%;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    transition: .3s;
+}
+.small-aside-container.collapsed {
+    width: 80px;
+}
+.main-container.collapsed {
+    margin-left: 80px;
+    width: calc(100% - 80px);
 }
 .header {
     width: 100%;
@@ -280,10 +288,11 @@ button {
     display: flex;
     align-items: flex-start;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .summary-view-wrapper {
-    width: 80%;
+    width: 75%;
 }
 
 .summary-container {
@@ -291,6 +300,7 @@ button {
     padding: 20px;
     border: 1px solid #A6A6A6;
     border-radius: 12px;
+    width: 100%;
 }
 .summary-container h2 {
     font-size: 22px;
@@ -299,6 +309,8 @@ button {
 .summary-card-wrapper {
     display: flex;
     gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
 }
 .summary-card {
     padding: 20px 40px;
@@ -356,11 +368,19 @@ button {
     display: flex;
     align-items: center;
     gap: 15px;
+    height: 300px;
+    position: relative;
+}
+#progressChart {
+    width: 100% !important;
+    height: 100% !important;
+    background: #f5f5f5;
 }
 .progress-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 .progress-content p {
     font-size: 12px;
@@ -435,6 +455,9 @@ button {
       border-bottom: 2px solid #05ab5b;
 }
 
+.table-wrapper {
+    width: 100%;
+}
 .table-wrapper table{
     width: 100%;
     text-align: left;
@@ -464,7 +487,7 @@ button {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 18px;
+    font-size: 16px;
 }
 .student-name img {
     width: 40px;
@@ -550,7 +573,7 @@ button {
 }
 
 .breakdown-wrapper {
-    width: 20%;
+    width: 23%;
 }
 .breakdown-card {
     background: #fff;
@@ -560,7 +583,12 @@ button {
 .breakdown-card h2 {
     padding: 20px;
 }
-
+.breakdown-card-scroll {
+    height: 500px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+    scroll-behavior: smooth;
+}
 .module-container {
     padding: 0 20px 20px;
 }
@@ -744,12 +772,14 @@ right: 20px;
 top: 20px;
 }
 
-.search-wrapper img {
+.search-wrapper img,
+.mobile-chart-container {
     display: none;
 }
 
 @media (max-width: 768px) {
-#sideNav {
+#sideNav,
+.chart-container {
     display: none;
 }
 #hamburger {
@@ -766,16 +796,21 @@ display: block;
 
 .mobile-sidenav {
     display: block;
+    z-index: 100; 
 }
+.mobile-sidenav.active {
+    left: 0;
+}
+
 .search-wrapper img {
     display: block;
     width: 20px;
     height: 20px;
 }
 .main-container {
-    width: 100%;
-    left: 10px;
-    z-index: 0;
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding:0 20px;
 }
 .header {
     background: none;
@@ -796,16 +831,67 @@ display: block;
     font-size: 22px;
 }
 
+.all-card-container {
+    padding: 0 0 20px;
+}
 .all-card-wrapper {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
+    width: 100%;
 }
 .summary-view-wrapper {
     width:100%;
 }
 .breakdown-wrapper {
     width: 100%;
+}
+.summary-container {
+    width: 100%;
+}
+.summary-card-wrapper {
+    width: 100%;
+} 
+.summary-card {
+    padding: 20px 60px;
+}
+
+.save-preview-btn {
+    display: none;
+}
+.mobile-chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.status-btn {
+    display: none;
+}
+.search-container .search-content input {
+    width: 350px;
+}
+.hide-table-mobile {
+    display: none;
+}
+
+.cta-btn-container {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+}
+.export-message-btn {
+    display: flex;
+    width: 100%;
+}
+.export-message-btn button {
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+}
+.export-message-btn button:first-child {
+    background-color: #cce9da;
+    border: 1px solid #05ab5b;
+    color: #000;
 }
 }

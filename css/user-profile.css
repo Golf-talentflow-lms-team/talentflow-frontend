@@ -27,7 +27,7 @@ a {
     height: 100vh;
     background: #012816;
     position: fixed;
-    width: 5%;
+    width: 80px;
 }
 .small-aside-container .logo {
     text-align: center;
@@ -83,13 +83,15 @@ a {
     min-height: 100vh;
     background: #012816;
     position: fixed;
-    width: 15%;
+    width: 250px;
     display: flex;
     flex-direction: column;
     top: 0;
     left: 0;
     z-index: 200;
+    transition: .3s;
 }
+
 .logo {
     display: flex;
     align-items: center;
@@ -190,10 +192,16 @@ a {
 
 /* main section */
 .main-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 85%;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    transition: .3s;
+}
+.small-aside-container.collapsed {
+    width: 80px;
+}
+.main-container.collapsed {
+    margin-left: 80px;
+    width: calc(100% - 80px);
 }
 
 .header {
@@ -943,9 +951,9 @@ display: block;
     height: 20px;
 }
 .main-container {
-    width: 100%;
-    left: 10px;
-    z-index: 0;
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 0 20px;
 }
 .header {
     background: none;
@@ -996,13 +1004,36 @@ width: 100%;
 }
 .completion-rate {
     border-right: none;
+    padding: 0;
 }
 
 .trend {
-    justify-content: center;
+    justify-content: flex-start;
 }
 
-
+.stats-rating-wrapper {
+    flex-direction: column;
+}
+.stats-card {
+    width: 100%;
+}
+.average-feedback  {
+    width: 100%;
+}
+.history-card { 
+    flex-direction: column;
+    padding: 10px;
+}
+.history-left-card {
+    display: none;
+}
+.history-right-card {
+    width: 100%;
+}
+.btn-view-upload {
+    flex-direction: column;
+    align-items: flex-start;
+}
 /* this is instructor mobile profile */
 .rate-card {
     flex-direction: column;

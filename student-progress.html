@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/student-progress.css">
-    <title>Student Progress</title>
-
+    <title>Progress Tracker</title>
+    <link rel="icon" href="../images/1000767314-Photoroom.png">
     
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
           <!-- side nav bar, left side -->
@@ -446,7 +445,7 @@
 
 
         <main>
-            <div class="main-container">
+            <div class="main-container ">
         <!-- main section header -->
     <header>
         <div class="header">
@@ -542,6 +541,20 @@
                         <p>Course mastery across all tracks</p>
                         </div>
                     </div>
+
+                    <div class="mobile-chart-container">
+
+                        <div class="progress-content">
+                            <div class="progress-circle">
+                            <span>72%</span>
+                            </div>
+
+                            <h2>Overall Progress</h2>
+                            <p>Course mastery across all tracks</p>
+                        </div>
+
+                          <canvas id="progressChart"></canvas>
+                    </div>
                 </div>
 
                 <div class="student-table">
@@ -579,13 +592,13 @@
                                 <th>
                                     Progress(%)
                                 </th>
-                                <th>
+                                <th  class="hide-table-mobile">
                                     Last Active
                                 </th>
-                                <th>
+                                <th  class="hide-table-mobile">
                                     Assignment <br>completed
                                 </th>
-                                <th>
+                                <th  class="hide-table-mobile">
                                     Status
                                 </th>
                             </tr>
@@ -615,15 +628,15 @@
 
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <span>April 01 1:30 PM</span>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <span style="text-align: center; display: block; ">10</span>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <div class="status-wrapper">
                                         <div class="dot-circle"></div>
                                         <span>On Track</span>
@@ -651,15 +664,15 @@
                                     </div>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <span>April 01 1:30 PM</span>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <span style="text-align: center; display: block; ">10</span>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <div class="status-wrapper" style="   background-color: #fff4e2;">
                                         <div class="dot-circle" style="background-color: #f39911;"></div>
                                         <span style=" color: #f39911;">Average</span>
@@ -688,15 +701,15 @@
                                     </div>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <span>April 01 1:30 PM</span>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <span style="text-align: center; display: block; ">10</span>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <div class="status-wrapper" style="background-color: rgb(250, 213, 219);">
                                         <div class="dot-circle" style="background-color: #ff0000;"></div>
                                         <span style="color: #ff0000;">At Risk</span>
@@ -723,15 +736,15 @@
                                     </div>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <span>April 01 1:30 PM</span>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <span style="text-align: center; display: block; ">10</span>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <div class="status-wrapper">
                                         <div class="dot-circle"></div>
                                         <span>On Track</span>
@@ -760,15 +773,15 @@
                                     </div>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <span>April 01 1:30 PM</span>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <span style="text-align: center; display: block; ">10</span>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <div class="status-wrapper" style="   background-color: #fff4e2;">
                                         <div class="dot-circle" style="background-color: #f39911;"></div>
                                         <span style=" color: #f39911;">Average</span>
@@ -797,15 +810,15 @@
                                     </div>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <span>April 01 1:30 PM</span>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <span style="text-align: center; display: block; ">10</span>
                                 </td>
 
-                                <td>
+                                <td  class="hide-table-mobile">
                                     <div class="status-wrapper">
                                         <div class="dot-circle"></div>
                                         <span>On Track</span>
@@ -856,7 +869,8 @@
                 <h2>Course/Module Breakdown</h2>
                 <hr style="color: #a5a5a5; margin-bottom: 20px;">
 
-                
+                <div class="breakdown-card-scroll">
+                    
                 <div class="module-container">
 
                     <div class="modules">
@@ -988,6 +1002,7 @@
                     </div>
                     </div>
 
+                    </div>
                 </div>
 
                 <div class="down-breakdown">
@@ -998,7 +1013,7 @@
                     <div class="module-chart">
                     <h4>Progress per module</h4>
                     
-                        <div class="chart"></div>
+                        <canvas id="progressChart"></canvas>
                     </div>
 
                     <div class="assignment-score">
@@ -1113,5 +1128,34 @@
 
 <script src="javascript/user-profile.js"></script>
 <script src="javascript/student-progress.js"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+window.onload = function () {
+const ctx = document.getElementById('progressChart').getContext('2d');
+
+    if (!canvas) {
+        console.error("Canvas not found");
+        return;
+    }
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Week 1', 'Week 2', 'Week 3'],
+            datasets: [{
+                label: 'Student Progress',
+                data: [30, 60, 90],
+                backgroundColor: ['#05ab5b', '#0d6efd', '#ff9800']
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+};
+</script>
 </body>
 </html>
