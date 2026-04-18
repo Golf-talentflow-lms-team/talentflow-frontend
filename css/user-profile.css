@@ -91,6 +91,7 @@ a {
     z-index: 200;
     transition: .3s;
 }
+<<<<<<< HEAD
 
 .logo {
     display: flex;
@@ -98,16 +99,24 @@ a {
     justify-content: center;
     flex-direction: column;
     padding: 20px 20px 20px;
+=======
+.logo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 25px;
+>>>>>>> 2450f17 (updated project files)
 }
-.logo img {
-    width: 100px;
-    height: 70px;
+.logo img{
+    width: 20%;
+    height: 20%;
+    padding-top: 20px;
 }
-.logo h1 {
-    color: #048f4c;
+.logo h3{
+    color: #fff;
     font-size: 18px;
     font-weight: 600;
-    
+    padding-top: 20px;
 }
 .aside-user-pic {
     display: flex;
@@ -172,6 +181,10 @@ a {
     font-size: 12px;
     color: #bebebe;
 }
+.side-bar-content:hover {
+    background-color: #335343;
+    border-right: 5px solid #f5fdfa;
+}
 .side-bar-content.active {
     background-color: #fff;
     color: #A6A6A6;
@@ -212,6 +225,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 3;
 }
 .search-wrapper {
     display: flex;
@@ -901,6 +918,7 @@ a {
 .search-wrapper h2 {
     display: none;
 }
+<<<<<<< HEAD
 #hamburger {
     display:none;
 }
@@ -1058,3 +1076,148 @@ width: 100%;
     width: 80%;
 }
 } */
+=======
+.logo2{display: none;}
+.dropbtn{display: none;}
+
+@media (max-width: 768px) {
+.main-container{
+    width: 100%;
+  }
+.aside-container{
+    display: none;
+    width: 50%;
+    height: 100%;
+    margin-top: 0;
+    position: fixed;
+    z-index: 20;
+}
+.dropdown{
+    display: block;
+    padding-right: 5px;
+    border: none;}
+
+.bar1, .bar2, .bar3{
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: 0.4s;}
+.dropbtn{
+    border: none;
+    display: block;
+    float: right;
+    background-color: #fff;} 
+.change .bar1{-webkit-transform: rotate(-45deg)
+translate(-9px, 6px);
+    transform: rotate(-45deg)
+    translate(-9px, 6px);}  
+.change .bar2{opacity: 0;}
+.change .bar3{-webkit-transform: rotate(45deg)
+    translate(-8px, -8px);
+    transform: rotate(45deg)
+    translate(-8px, -8px);} 
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+.search-wrapper{
+    display: none;
+}
+.continue-lesson button {
+    display: none;
+ }
+ .logo2{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: #000;
+    background-color: #fff;
+    width: 70%;
+    padding: 10px;
+}
+.logo2 img{
+    width: 60px;
+    height: 60px;
+    padding-top: 10px;
+}
+.logo2 h3{
+    padding-top: 6%;
+}
+    .personal-card-container {
+        width: 100%;
+    }
+    .engagement-card-container {
+        width: 100%;
+    }
+}
+@media (max-width: 1024px) {
+.main-container{
+    width: 100%;
+  }
+.aside-container{
+    display: none;
+    width: 50%;
+    height: 100%;
+    margin-top: 0;
+    position: fixed;
+    z-index: 20;
+}
+.dropdown{
+    display: block;
+    padding-right: 5px;
+    border: none;}
+
+.bar1, .bar2, .bar3{
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: 0.4s;}
+.dropbtn{
+    border: none;
+    display: block;
+    float: right;
+    background-color: #fff;} 
+.change .bar1{-webkit-transform: rotate(-45deg)
+translate(-9px, 6px);
+    transform: rotate(-45deg)
+    translate(-9px, 6px);}  
+.change .bar2{opacity: 0;}
+.change .bar3{-webkit-transform: rotate(45deg)
+    translate(-8px, -8px);
+    transform: rotate(45deg)
+    translate(-8px, -8px);} 
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+.search-wrapper{
+    display: none;
+}
+.continue-lesson button {
+    display: none;
+ }
+ .logo2{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: #000;
+    background-color: #fff;
+    width: 70%;
+    padding: 10px;
+}
+.logo2 img{
+    width: 60px;
+    height: 60px;
+    padding-top: 10px;
+}
+.logo2 h3{
+    padding-top: 6%;
+}
+    .personal-card-container {
+        width: 100%;
+    }
+    .engagement-card-container {
+        width: 100%;
+    }
+}
+>>>>>>> 2450f17 (updated project files)

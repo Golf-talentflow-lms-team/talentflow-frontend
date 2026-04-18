@@ -6,63 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TalentHub Dashboard</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<<<<<<< HEAD
     <link rel="stylesheet" href="css/dashboard.css">
+=======
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+>>>>>>> 2450f17 (updated project files)
 </head>
 
-<body>
-
-    <div class="container">
-
+<body class="site">
         <!-- SIDEBAR -->
-        <aside class="sidebar">
-            <div>
-                <div class="logo">
-                    <img src="logo.png" width="35">
-                    <span>TalentHub</span>
-                </div>
-
-                <div class="user">
-                    <img src="https://i.pravatar.cc/100">
-                    <div>
-                        <p>Ezekiel Moyinoluwa</p>
-                        <small>ID: CAR123456</small>
-                    </div>
-                </div>
-
-                <nav>
-                    <a class="active"><i class="ri-dashboard-line"></i>Dashboard</a>
-                    <a><i class="ri-book-line"></i>Explore Courses</a>
-                    <a><i class="ri-play-line"></i>Lessons <span class="badge">2</span></a>
-                    <a><i class="ri-file-line"></i>Assignments <span class="badge">2</span></a>
-                    <a><i class="ri-chat-3-line"></i>Discussion</a>
-                    <a><i class="ri-bar-chart-line"></i>Progress</a>
-                </nav>
-            </div>
-
-            <div class="bottom">
-                <a><i class="ri-question-line"></i>Help & Support</a>
-                <a><i class="ri-settings-3-line"></i>Settings</a>
-                <a class="logout"><i class="ri-logout-box-line"></i>Logout</a>
-            </div>
-        </aside>
+         <aside class="sideb" id="cxd">
+      <div class="topsideb">
+        <div class="lg">
+          <img src="./project img/Group (3).png">
+          <h3>TalentHub</h3>
+        </div>
+      <div class="sld">
+      <img src="./project img/Ellipse 47072.png"> 
+      <P>Adedokun Daniel <br> ID:CAR123456</P>
+      </div>
+      </div>
+      <ul>
+        <li style="background-color: #f5fdfa; color: #09aa5b; border-right: 5px solid #09aa5b;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 9V3H21V9H13ZM3 13V3H11V13H3ZM13 21V11H21V21H13ZM3 21V15H11V21H3ZM5 11H9V5H5V11ZM15 19H19V13H15V19ZM15 7H19V5H15V7ZM5 19H9V17H5V19Z" fill="#05AB5B"/>
+        </svg>
+        Dashboard</li>
+        <li> <a href="learner-profile.html"><svg class="icoon" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.3333 2.16669H13V8.12502L15.1667 6.50002L17.3333 8.12502V2.16669Z" stroke-width="2"/>
+        <path d="M21.6673 2.16669V23.8334H4.33398V2.16669H21.6673Z" stroke-width="2"/>
+        </svg>
+        Profile</a></li>
+        <li> <a href="lesson.html"><svg class="icoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+          <path d="M7 4v7l2.5-1.5L12 11V4zm7.463 17.538Q13 20.075 13 18t1.463-3.537T18 13t3.538 1.463T23 18t-1.463 3.538T18 23t-3.537-1.463M16.75 20.5l4-2.5l-4-2.5zM11 17.993q0 1.082.338 2.095T12.25 22H5q-.825 0-1.412-.587T3 20V4q0-.825.588-1.412T5 2h12q.825 0 1.413.588T19 4v7.05q-.251-.025-.503-.038T17.993 11q-2.918 0-4.955 2.038T11 17.993"/>
+                </svg>
+        Lessons </a><x>2</x></li>
+        <li><a href="assignment.html"><svg class="icoon2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H9.2C9.41667 2.4 9.77933 1.91667 10.288 1.55C10.7967 1.18333 11.3673 1 12 1C12.6327 1 13.2037 1.18333 13.713 1.55C14.2223 1.91667 14.5847 2.4 14.8 3H19C19.55 3 20.021 3.196 20.413 3.588C20.805 3.98 21.0007 4.45067 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5ZM5 19H19V5H5V19ZM7 17H14V15H7V17ZM7 13H17V11H7V13ZM7 9H17V7H7V9ZM12.538 4.038C12.6793 3.896 12.75 3.71667 12.75 3.5C12.75 3.28333 12.679 3.10433 12.537 2.963C12.395 2.82167 12.216 2.75067 12 2.75C11.784 2.74933 11.605 2.82033 11.463 2.963C11.321 3.10567 11.25 3.28467 11.25 3.5C11.25 3.71533 11.321 3.89467 11.463 4.038C11.605 4.18133 11.784 4.252 12 4.25C12.216 4.248 12.3953 4.178 12.538 4.038Z"/>
+        </svg>
+        Assignments </a><x>2</x></li>
+        <li><a href="discussion.html"><svg class="icoon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 12V3C17 2.73478 16.8946 2.48043 16.7071 2.29289C16.5196 2.10536 16.2652 2 16 2H3C2.73478 2 2.48043 2.10536 2.29289 2.29289C2.10536 2.48043 2 2.73478 2 3V17L6 13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12ZM21 6H19V15H6V17C6 17.2652 6.10536 17.5196 6.29289 17.7071C6.48043 17.8946 6.73478 18 7 18H18L22 22V7C22 6.73478 21.8946 6.48043 21.7071 6.29289C21.5196 6.10536 21.2652 6 21 6Z"/>
+        </svg>
+        Discussion </a></li>
+        <li style="border-bottom: none;"> <a href="progress-achievements.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+        <path fill="#fff" d="m3.5 18.5l6-6l4 4L22 6.92L20.59 5.5l-7.09 8l-4-4L2 17z"/></svg>
+        Progress</a></li>
+      </ul>
+      <div>
+        <ul style="margin-top: 18%;">
+        <li style="border-bottom: none;"><svg class="icoon2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.838 17.638C13.0793 17.396 13.2 17.1 13.2 16.75C13.2 16.4 13.0793 16.104 12.838 15.862C12.5967 15.62 12.3007 15.4993 11.95 15.5C11.5993 15.5007 11.3037 15.6217 11.063 15.863C10.8223 16.1043 10.7013 16.4 10.7 16.75C10.6987 17.1 10.8197 17.396 11.063 17.638C11.3063 17.88 11.602 18.0007 11.95 18C12.298 17.9993 12.594 17.8783 12.838 17.637M11.05 14.15H12.9C12.9 13.6 12.9627 13.1667 13.088 12.85C13.2133 12.5333 13.5673 12.1 14.15 11.55C14.5833 11.1167 14.925 10.704 15.175 10.312C15.425 9.92 15.55 9.44934 15.55 8.9C15.55 7.96667 15.2083 7.25001 14.525 6.75001C13.8417 6.25001 13.0333 6.00001 12.1 6.00001C11.15 6.00001 10.3793 6.25001 9.788 6.75001C9.19667 7.25001 8.784 7.85001 8.55 8.55001L10.2 9.20001C10.2833 8.9 10.471 8.57501 10.763 8.22501C11.055 7.87501 11.5007 7.70001 12.1 7.70001C12.6333 7.70001 13.0333 7.846 13.3 8.138C13.5667 8.43 13.7 8.75067 13.7 9.10001C13.7 9.43334 13.6 9.74601 13.4 10.038C13.2 10.33 12.95 10.6007 12.65 10.85C11.9167 11.5 11.4667 11.9917 11.3 12.325C11.1333 12.6583 11.05 13.2667 11.05 14.15ZM12 22C10.6167 22 9.31667 21.7377 8.1 21.213C6.88334 20.6883 5.825 19.9757 4.925 19.075C4.025 18.1743 3.31267 17.116 2.788 15.9C2.26333 14.684 2.00067 13.384 2 12C1.99933 10.616 2.262 9.31601 2.788 8.10001C3.314 6.88401 4.02633 5.82567 4.925 4.92501C5.82367 4.02434 6.882 3.31201 8.1 2.78801C9.318 2.26401 10.618 2.00134 12 2.00001C13.382 1.99867 14.682 2.26134 15.9 2.78801C17.118 3.31467 18.1763 4.02701 19.075 4.92501C19.9737 5.82301 20.6863 6.88134 21.213 8.10001C21.7397 9.31867 22.002 10.6187 22 12C21.998 13.3813 21.7353 14.6813 21.212 15.9C20.6887 17.1187 19.9763 18.177 19.075 19.075C18.1737 19.973 17.1153 20.6857 15.9 21.213C14.6847 21.7403 13.3847 22.0027 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.32501C16.125 4.77501 14.2333 4.00001 12 4.00001C9.76667 4.00001 7.875 4.77501 6.325 6.32501C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z"/>
+        </svg>
+        Help & Support</li>
+        <li><svg class="icoon2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.9009 12.66C19.7406 12.4775 19.6521 12.2429 19.6521 12C19.6521 11.7571 19.7406 11.5225 19.9009 11.34L21.1809 9.90002C21.3219 9.74269 21.4095 9.54472 21.4311 9.33452C21.4526 9.12433 21.407 8.9127 21.3009 8.73002L19.3009 5.27002C19.1958 5.08754 19.0358 4.94289 18.8436 4.8567C18.6515 4.77051 18.437 4.74718 18.2309 4.79002L16.3509 5.17002C16.1117 5.21945 15.8626 5.17961 15.6508 5.05802C15.4389 4.93643 15.2789 4.7415 15.2009 4.51002L14.5909 2.68002C14.5238 2.4814 14.396 2.30888 14.2255 2.18686C14.055 2.06484 13.8505 1.99948 13.6409 2.00002H9.64087C9.42281 1.98864 9.20701 2.04894 9.02644 2.17173C8.84587 2.29452 8.71045 2.47304 8.64087 2.68002L8.08087 4.51002C8.00287 4.7415 7.84284 4.93643 7.63099 5.05802C7.41913 5.17961 7.17009 5.21945 6.93087 5.17002L5.00087 4.79002C4.80542 4.7624 4.60617 4.79324 4.42822 4.87866C4.25027 4.96407 4.10157 5.10025 4.00087 5.27002L2.00087 8.73002C1.89203 8.91067 1.84309 9.1211 1.86106 9.33124C1.87902 9.54138 1.96296 9.74046 2.10087 9.90002L3.37087 11.34C3.53119 11.5225 3.61961 11.7571 3.61961 12C3.61961 12.2429 3.53119 12.4775 3.37087 12.66L2.10087 14.1C1.96296 14.2596 1.87902 14.4587 1.86106 14.6688C1.84309 14.8789 1.89203 15.0894 2.00087 15.27L4.00087 18.73C4.10597 18.9125 4.26599 19.0571 4.45812 19.1433C4.65026 19.2295 4.8647 19.2529 5.07087 19.21L6.95087 18.83C7.19009 18.7806 7.43913 18.8204 7.65099 18.942C7.86284 19.0636 8.02287 19.2585 8.10087 19.49L8.71087 21.32C8.78045 21.527 8.91587 21.7055 9.09644 21.8283C9.27701 21.9511 9.49281 22.0114 9.71087 22H13.7109C13.9205 22.0006 14.125 21.9352 14.2955 21.8132C14.466 21.6912 14.5938 21.5186 14.6609 21.32L15.2709 19.49C15.3489 19.2585 15.5089 19.0636 15.7208 18.942C15.9326 18.8204 16.1817 18.7806 16.4209 18.83L18.3009 19.21C18.507 19.2529 18.7215 19.2295 18.9136 19.1433C19.1058 19.0571 19.2658 18.9125 19.3709 18.73L21.3709 15.27C21.477 15.0873 21.5226 14.8757 21.5011 14.6655C21.4795 14.4553 21.3919 14.2573 21.2509 14.1L19.9009 12.66ZM18.4109 14L19.2109 14.9L17.9309 17.12L16.7509 16.88C16.0307 16.7328 15.2814 16.8551 14.6455 17.2238C14.0095 17.5925 13.531 18.1819 13.3009 18.88L12.9209 20H10.3609L10.0009 18.86C9.77073 18.1619 9.29225 17.5725 8.65628 17.2038C8.0203 16.8351 7.27109 16.7128 6.55087 16.86L5.37087 17.1L4.07087 14.89L4.87087 13.99C5.36283 13.44 5.6348 12.7279 5.6348 11.99C5.6348 11.2521 5.36283 10.54 4.87087 9.99002L4.07087 9.09002L5.35087 6.89002L6.53087 7.13002C7.25109 7.27724 8.0003 7.1549 8.63628 6.78622C9.27225 6.41753 9.75073 5.82818 9.98087 5.13002L10.3609 4.00002H12.9209L13.3009 5.14002C13.531 5.83818 14.0095 6.42753 14.6455 6.79622C15.2814 7.1649 16.0307 7.28724 16.7509 7.14002L17.9309 6.90002L19.2109 9.12002L18.4109 10.02C17.9244 10.5688 17.6558 11.2767 17.6558 12.01C17.6558 12.7433 17.9244 13.4513 18.4109 14ZM11.6409 8.00002C10.8497 8.00002 10.0764 8.23461 9.41859 8.67414C8.76079 9.11366 8.24811 9.73838 7.94535 10.4693C7.6426 11.2002 7.56339 12.0045 7.71773 12.7804C7.87207 13.5563 8.25304 14.269 8.81245 14.8284C9.37186 15.3879 10.0846 15.7688 10.8605 15.9232C11.6364 16.0775 12.4407 15.9983 13.1716 15.6955C13.9025 15.3928 14.5272 14.8801 14.9668 14.2223C15.4063 13.5645 15.6409 12.7911 15.6409 12C15.6409 10.9392 15.2194 9.92174 14.4693 9.17159C13.7192 8.42144 12.7017 8.00002 11.6409 8.00002ZM11.6409 14C11.2453 14 10.8586 13.8827 10.5297 13.663C10.2008 13.4432 9.94449 13.1308 9.79311 12.7654C9.64174 12.3999 9.60213 11.9978 9.6793 11.6098C9.75647 11.2219 9.94695 10.8655 10.2267 10.5858C10.5064 10.3061 10.8627 10.1156 11.2507 10.0384C11.6387 9.96128 12.0408 10.0009 12.4062 10.1523C12.7717 10.3036 13.084 10.56 13.3038 10.8889C13.5236 11.2178 13.6409 11.6045 13.6409 12C13.6409 12.5304 13.4302 13.0392 13.0551 13.4142C12.68 13.7893 12.1713 14 11.6409 14Z"/>
+        </svg>
+        Settings</li>
+        <li style="border-bottom: none;"><svg class="icoon2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H12V5H5V19H12V21H5ZM16 17L14.625 15.55L17.175 13H9V11H17.175L14.625 8.45L16 7L21 12L16 17Z"/>
+        </svg>Logout</li>
+        </ul>
+      </div>
+    </aside>
 
         <!-- MAIN -->
-        <main class="main">
+        <main class="left">
 
             <!-- HEADER -->
-            <div class="header">
-                <i class="ri-menu-line menu-toggle"></i>
-                <div class="search">
-                    <i class="ri-search-line"></i>
-                    <input placeholder="Search">
-                </div>
-                <div class="icons">
-                    <i class="ri-mic-line"></i>
-                    <i class="ri-notification-3-line"></i>
-                </div>
-            </div>
+        <header class="header" id="stick">
+        <div class="header-left">
+        <img src="./project img/ci_bar-left.png">
+        <img src="./project img/magnifyingglass.png">
+        <input type="text" placeholder="search" title="type in category" class="search">
+        <img src="./project img/Group.png">
+        </div>
+        <div class="logo2">
+          <img src="./project img/Group (3).png">
+          <h3>TalentHub</h3>
+        </div>
+        <div class="header-right">
+        <img src="./project img/Group (1).png">
+        <button>Continue Lesson</button>
+        <div class="dropdown">
+                        <span onclick="myFunction(this)" class="dropbtn">
+                          <div class="bar1"></div>
+                          <div class="bar2"></div>
+                          <div class="bar3"></div>
+                        </span>
+        </div>
+            <script>
+                 window.onscroll = function()
+           {headFunction()};
+             var head = document.getElementById("stick");
+              var sticky = head.offsetTop;
+           function headFunction() {
+              if (window.pageYOffset >= sticky) {
+                head.classList.add("sticky")
+              }
+              else {
+                head.classList.remove("sticy");
+              }
+           }
+                       function myFunction(y) {
+                        var x = document.getElementById("cxd");
+                        if (x.style.display === "block") {
+                             x.style.display = "none";
+                        }
+                        else {
+                            x.style.display = "block";
+                    }
+                             y.classList.toggle("change");
+                       }
+                       
+            </script>
+        </div>
+        </header>
 
             <!-- WELCOME -->
             <div class="welcome">
@@ -73,7 +133,7 @@
             <!-- TOP COURSES -->
             <div class="top">
                 <div class="top-card">
-                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e">
+                    <img src="./images/trainer.jpg">
                     <div class="top-info">
                         <span class="tag">In Progress</span>
                         <h3>Advanced UI/UX Design Principles</h3>
@@ -94,7 +154,7 @@
                 </div>
 
                 <div class="top-card">
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
+                    <img src="./images/trainer.jpg">
                     <div class="top-info">
                         <span class="tag">In Progress</span>
                         <h3>Advanced UI/UX Design Principles</h3>
@@ -285,7 +345,6 @@
                 </div>
 
         </main>
-    </div>
 
     <script src="javascript/dashboard.js"></script>
 
