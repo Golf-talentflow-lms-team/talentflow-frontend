@@ -17,7 +17,7 @@
 
       <section class="side__details">
        <div class="logo">
-          <img src="images/logo/TalentHubLogo1.jpeg" alt="Talent Flow Logo">
+          <img src="./project img/Group (3).png" alt="Talent Flow Logo">
           <h1>TalentHub</h1>
         </div>
         <h2>“Learn smarter. Build skills. Track your progress.”</h2>
@@ -29,12 +29,12 @@
       <!-- START OF USER DETAILS -->
 
       <section class="user__details">
-        <img class="img" src="images/logo/TalentHubLogo1.jpeg" alt="Talent Flow Logo">
+        <img class="img" src="./project img/Group (3).png" alt="Talent Flow Logo">
         <h1>TalentHub</h1>
-        <h2>Welcome Back to TalentHub</h2>
+        <h2>Welcome to TalentHub</h2>
         <h3>Build your Skill and collaborate with your Peers</h3>
 
-        <form action="https://httpbin.org/post" method="post">
+        <form onsubmit="login(event)">
           <label for="email"></label>
           <input
             type="email"
@@ -61,46 +61,27 @@
           </label></h4>         
 </div>
           <button class="button" type="submit">Log In</button>
+          <p id="message"></p>
         </form>
 
         <span class="lines">OR</span>
         <p class="socials">
           <img
             src="images/login-images/googleimage.png"
-            alt="Google Logo Image"><a href="google.com" target="_blank" id="googleBtn" >Sign up with Google</a>
+            alt="Google Logo Image"><a href="google.com" target="_blank">Sign up with Google</a>
         </p>
         <p class="socials">
           <img
             src="images/login-images/slackimage.png"
-            alt="Slack Logo Image"><a href="slack.com" target="_blank" id="slackBtn">Sign up with Slack</a>
+            alt="Slack Logo Image"><a href="slack.com" target="_blank">Sign up with Slack</a>
         </p>
         <h5>
-          Don't have an account?<a class="Log" href="account.html">Sign Up</a>
+          Don't have an account?<a class="Log" href="index.html">Sign Up</a>
         </h5>
       </section>
 
        <!-- END OF USER DETAILS -->
 
     </main>
-        
-
-
-
-
-    <script>
-      document.getElementById("googleBtn").addEventListener("click", (e) => {
-        e.preventDefault();
-        alert("Backend not connected yet.");
-        window.location.href = "http://localhost:5000/auth/google";
-      });
-
-      document.getElementById("slackBtn").addEventListener("click", (e) => {
-        e.preventDefault();
-        alert("Backend not connected yet.");
-        window.location.href = "http://localhost:5000/auth/slack";
-      });
-    </script>
-
-
   </body>
 </html>
