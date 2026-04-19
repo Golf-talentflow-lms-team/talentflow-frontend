@@ -7,6 +7,7 @@
     <meta name="description" content="Login Page For TalentHub, a Learning Management Software (LMS) built to educate and train individuals on the Trueminds platform.">
     <title>TalentHub, a subsidiary of the Trueminds Innovations Limited</title>
     <link rel="stylesheet" href="css/login.css">
+
   </head>
 
   <body>
@@ -66,12 +67,12 @@
         <p class="socials">
           <img
             src="images/login-images/googleimage.png"
-            alt="Google Logo Image"><a href="google.com" target="_blank">Sign up with Google</a>
+            alt="Google Logo Image"><a href="google.com" target="_blank" id="googleBtn" >Sign up with Google</a>
         </p>
         <p class="socials">
           <img
             src="images/login-images/slackimage.png"
-            alt="Slack Logo Image"><a href="slack.com" target="_blank">Sign up with Slack</a>
+            alt="Slack Logo Image"><a href="slack.com" target="_blank" id="slackBtn">Sign up with Slack</a>
         </p>
         <h5>
           Don't have an account?<a class="Log" href="account.html">Sign Up</a>
@@ -81,5 +82,25 @@
        <!-- END OF USER DETAILS -->
 
     </main>
+        
+
+
+
+
+    <script>
+      document.getElementById("googleBtn").addEventListener("click", (e) => {
+        e.preventDefault();
+        alert("Backend not connected yet.");
+        window.location.href = "http://localhost:5000/auth/google";
+      });
+
+      document.getElementById("slackBtn").addEventListener("click", (e) => {
+        e.preventDefault();
+        alert("Backend not connected yet.");
+        window.location.href = "http://localhost:5000/auth/slack";
+      });
+    </script>
+
+
   </body>
 </html>

@@ -814,13 +814,14 @@ display: block;
 }
 .header {
     background: none;
+    padding: 0;
 }
 .continue-lesson button {
     display: none;
 }
 .continue-lesson .svg-wrapper {
     border-right: none;
-    padding: 0;
+    padding: 20px 0;
 }
 
 .search-wrapper .search-content {
