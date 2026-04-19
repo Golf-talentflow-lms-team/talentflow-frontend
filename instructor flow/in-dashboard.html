@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Protechniks">
+    <meta name="description" content="Instructor Dashboard Page For TalentHub, a Learning Management Software (LMS) built to educate and train individuals on the Trueminds platform.">
+    <title>TalentHub, a subsidiary of the Trueminds Innovations Limited</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/in-dashboard.css">
+</head>
+
+<body>
+
+     <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div>
+                <div class="logo">
+                    <img src="logo/TalentHubLogo1.jpeg" width="35">
+                    <span>TalentHub</span>
+                </div>
+
+                <div class="user">
+                    <img src="https://i.pravatar.cc/100">
+                    <div>
+                        <p>PRODIGYOUS</p>
+                        <small>ID:CAR123456</small>
+                    </div>
+                </div>
+
+                <nav>
+                    <a class="active"><i class="ri-dashboard-line"></i>Dashboard</a>
+                    <a><i class="ri-book-line"></i>Course Manager</a>
+                    <hr>
+                    <a><i class="ri-play-line"></i>Assignment</a>
+                    <hr>
+                    <a><i class="ri-file-line"></i>Submission Desk</a>
+                    <hr>
+                    <a><i class="ri-chat-3-line"></i>Discussion</a>
+                    <hr>
+                    <a><i class="ri-bar-chart-line"></i>Student Progress</a>
+                </nav>
+            </div>
+
+            <div class="bottom">
+                <a><i class="ri-question-line"></i>Help & Support</a>
+                <a><i class="ri-settings-3-line"></i>Settings</a>
+                <hr>
+                <a class="logout"><i class="ri-logout-box-line"></i>Logout</a>
+            </div>
+        </aside>
+
+<main class="main">
+
+    <img class="img" src="logo/TalentHubLogo1.jpeg" alt="Talent Flow Logo">
+         <h1>TalentHub</h1>
+
+            <div class="header">
+                <i> <img src="icons/bar.png" alt="bar image"></i>
+                <div class="search">
+                    <i class="ri-search-line"></i>
+                    <input placeholder="Search">
+                    <i class="ri-mic-line"></i>
+                </div>
+                <div class="icons">  
+                    <i class="ri-notification-3-line"></i>
+                </div>
+            </div>
+
+            <div class="welcome">
+                <div>
+                <h2>Welcome Back, PRODIGYOUS!</h2>
+                <p>You have 2 submissions to review and 2 pending tasks</p>
+                </div>
+                <div class="links">
+                    <button class="active">Create Course</button>
+                    <button>Add Assignment</button>
+                    <button>Send Announcement</p>
+                </div>
+            </div>
+
+            <div class="status">
+                <h2>Status</h2>
+                <div class="status__div">
+                    <div class="status1">
+                    <h3 class="status__h3">2 Assignments Pending Review</h3>
+                    <p class="status__p">REQUIRES GRADING</p>
+                        <div class="status__btn__logo">
+                        <button class="status__btn">Review Now</button>
+                        <img class="status__img" src="icons/assign.png" alt="assignment image">
+                        </div>
+                    </div>
+                   <div class="status2">
+                    <h3 class="status__h3">3 Courses in Draft</h3>
+                    <p class="status__p">NOT YET PUBLISHED</p>
+                        <div class="status__btn__logo">
+                        <button class="status__btn">Complete Setup</button>
+                        <img class="status__img" src="icons/courses.png" alt="assignment image">
+                        </div>
+                    </div>
+                   <div class="status3">
+                    <h3 class="status__h3">5 Students Inactive</h3>
+                    <p class="status__p">NO ACTIVITY IN 7 DAYS</p>
+                        <div class="status__btn__logo">
+                        <button class="status__btn">View Students</button>
+                        <img class="status__img" src="icons/students.png" alt="assignment image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="status__details">
+                    <div class="status__info">
+                    <img src="icons/total.png" alt="Total Courses">
+                    <div class="sub">
+                    <h2>Total Courses</h2>
+                    <p>12</p>
+                    </div>
+                    </div>
+                    <div class="status__info">
+                    <img src="icons/active.png" alt="Active Students">
+                    <div class="sub">
+                    <h2>Active Students</h2>
+                    <p>1,284</p>
+                    </div>
+                    </div>
+                    <div class="status__info">
+                    <img src="icons/completion.png" alt="Completion Rate">
+                    <div class="sub">
+                    <h2>Completion Rate</h2>
+                    <p>75%</p>
+                    </div>
+                    </div>
+                    <div class="status__info">
+                    <img src="icons/submission.png" alt="Submission">
+                    <div class="sub">
+                    <h2>Submission</h2>
+                    <p>45</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <table class="instructor">
+                <caption>Instructor's Table</caption>
+                 <tr>
+    <th>Course</th>
+    <th>Status</th>
+    <th>Students</th>
+    <th>Last Updated</th>
+    <th>Actions</th>
+  </tr>
+  <tr>
+    <td>Introduction UI/UX</td>
+    <td class="pub">Published</td>
+    <td>120</td>
+    <td>2 days ago</td>
+    <td><img src="icons/table-edit.png" alt="Table Edit icon">Edit</td>
+  </tr>
+  <tr>
+    <td>Figma Basics</td>
+    <td class="draft">Draft</td>
+    <td>0</td>
+    <td>5 days ago</td>
+    <td>Continue</td>
+  </tr>
+  <tr>
+    <td>Web Design</td>
+    <td class="on">Ongoing</td>
+    <td>80</td>
+    <td>Today</td>
+    <td> <img src="icons/table-view.png" alt="Table View icon">View</td>
+  </tr>
+            </table>
+
+             <table class="recent">
+                <caption>Recent Submission</caption>
+                 <tr>
+    <th>Assignment Name | Course</th>
+    <th>Student Count | Status | Review</th>
+  </tr>
+  <tr>
+    <td>Assignment 1 - UI Basics</td>
+    <td>12 | Submission | <span>Pending</span></td>
+    </tr>
+  <tr>
+   <td>Assignment 2 - UX Principles</td>
+    <td>1 Student| Pending | <span>Review</span></td>
+  </tr>
+            </table>
+
+            <div class="quick">
+                <h2>Quick Action Panel</h2>
+                <div class="button__container">
+                <button>Create Course</button>
+                <button>Add Lesson</button>
+                <button>Create Assignment</button>
+                <button>Send Announcement</button>
+                </div>
+            </div>
+
+</main>
+ 
+</body>
+
+</html>

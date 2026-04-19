@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentFlow - Submission Review</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="submission.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 22H22L12 2Z" fill="#00cc88"/>
+                        <path d="M12 7L6.5 18H17.5L12 7Z" fill="#002619"/>
+                    </svg>
+                    <span>TalentFlow</span>
+                </div>
+            </div>
+            
+            <div class="user-profile">
+                <img src="https://i.pravatar.cc/150?img=11" alt="User Avatar" class="avatar">
+                <div class="user-info">
+                    <span class="user-name">Adedokun Daniel</span>
+                    <span class="user-id">ID: CAP023456</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#" class="nav-item">
+                    <i class='bx bx-grid-alt'></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class='bx bx-book-content'></i>
+                    <span>Course Manager</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class='bx bx-task'></i>
+                    <span>Assignment</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <i class='bx bx-receipt'></i>
+                    <span>Submission Desk</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class='bx bx-message-square-dots'></i>
+                    <span>Discussion</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class='bx bx-line-chart'></i>
+                    <span>Student Progress</span>
+                </a>
+                
+                <div class="nav-divider"></div>
+                
+                <a href="#" class="nav-item">
+                    <i class='bx bx-help-circle'></i>
+                    <span>Help & Support</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class='bx bx-cog'></i>
+                    <span>Settings</span>
+                </a>
+                <a href="#" class="nav-item logout">
+                    <i class='bx bx-log-out'></i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="top-bar-left">
+                    <button class="icon-btn"><i class='bx bx-menu'></i></button>
+                    <!-- Mobile Logo -->
+                    <div class="mobile-logo hidden-desktop" style="align-items: center; gap: 8px; font-weight: 700; font-size: 18px; color: #1f2937;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 22H22L12 2Z" fill="#00cc88"/>
+                            <path d="M12 7L6.5 18H17.5L12 7Z" fill="#002619"/>
+                        </svg>
+                        <span>TalentFlow</span>
+                    </div>
+                    <div class="search-bar hidden-mobile">
+                        <i class='bx bx-search'></i>
+                        <input type="text" placeholder="Search">
+                        <i class='bx bx-microphone'></i>
+                    </div>
+                </div>
+                <div class="top-bar-right">
+                    <button class="icon-btn"><i class='bx bx-bell'></i></button>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <h1 class="page-title">Course Builder</h1>
+                
+                <div class="mobile-tabs hidden-desktop">
+                    <a href="#studentListPanel" class="mobile-tab-btn active">Student List</a>
+                    <a href="#submissionPanel" class="mobile-tab-btn">Submission</a>
+                    <a href="#gradingPanel" class="mobile-tab-btn">Grading Panel</a>
+                </div>
+
+                <div class="panels-container">
+                    <!-- Left Panel: Student List -->
+                    <div class="panel student-list-panel" id="studentListPanel">
+                        <div class="panel-header">
+                            <h2>Student List (UX Foundations)</h2>
+                        </div>
+                        <div class="tabs">
+                            <span class="tab active">All</span> / 
+                            <span class="tab">Submitted</span> / 
+                            <span class="tab">Pending</span>
+                        </div>
+                        <div class="filter-dropdown">
+                            <select>
+                                <option>Status tag</option>
+                            </select>
+                            <i class='bx bx-chevron-down'></i>
+                        </div>
+                        
+                        <div class="student-list">
+                            <div class="student-item">
+                                <div class="student-num">1.</div>
+                                <div class="student-details">
+                                    <h3 class="student-name">Adedokun Daniel</h3>
+                                    <div class="student-meta">
+                                        <span class="meta-label">Status:</span>
+                                        <span class="badge badge-green-light">Grade</span>
+                                        <span class="meta-label">Grade:</span>
+                                        <span class="grade-score">100%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="student-item active">
+                                <div class="student-num">2.</div>
+                                <div class="student-details">
+                                    <h3 class="student-name">Abdulazeez Uthman Alaso</h3>
+                                    <div class="student-meta">
+                                        <span class="meta-label">Status:</span>
+                                        <span class="badge badge-green-light">Grade</span>
+                                        <span class="meta-label">Grade:</span>
+                                        <span class="grade-score">100%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="student-item">
+                                <div class="student-num">3.</div>
+                                <div class="student-details">
+                                    <h3 class="student-name">UI Biba</h3>
+                                    <div class="student-meta">
+                                        <span class="meta-label">Status:</span>
+                                        <span class="badge badge-green-light">Grade</span>
+                                        <span class="meta-label">Grade:</span>
+                                        <span class="grade-score">100%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="student-item">
+                                <div class="student-num">4.</div>
+                                <div class="student-details">
+                                    <h3 class="student-name">Michael Taiwo</h3>
+                                    <div class="student-meta">
+                                        <span class="meta-label">Status:</span>
+                                        <span class="badge badge-green-light">Grade</span>
+                                        <span class="meta-label">Grade:</span>
+                                        <span class="grade-score">100%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="student-item">
+                                <div class="student-num">5.</div>
+                                <div class="student-details">
+                                    <h3 class="student-name">Adedokun Daniel</h3>
+                                    <div class="student-meta">
+                                        <span class="meta-label">Status:</span>
+                                        <span class="badge badge-green-light">Grade</span>
+                                        <span class="meta-label">Grade:</span>
+                                        <span class="grade-score">100%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="student-item">
+                                <div class="student-num">6.</div>
+                                <div class="student-details">
+                                    <h3 class="student-name">Aisha Buhari</h3>
+                                    <div class="student-meta">
+                                        <span class="meta-label">Status:</span>
+                                        <span class="badge badge-green-light">Grade</span>
+                                        <span class="meta-label">Grade:</span>
+                                        <span class="grade-score">100%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Panels -->
+                    <div class="right-column">
+                        <!-- Submission View Panel -->
+                        <div class="panel submission-view-panel" id="submissionPanel">
+                            <div class="panel-header">
+                                <h2>Submission View: UX Foundations</h2>
+                            </div>
+                            <div class="submission-details">
+                                <div class="detail-group">
+                                    <span class="detail-label">Student Name:</span>
+                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                        <span class="detail-value" id="detailStudentName">Abdulazeez Uthman Alaso</span>
+                                        <span class="badge badge-green-light">Submitted</span>
+                                    </div>
+                                </div>
+                                <div class="detail-group">
+                                    <span class="detail-label">Submission Time:</span>
+                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                        <span class="detail-value">Mar 30, 6:08 PM</span>
+                                        <span class="badge badge-orange-dot"><span class="dot"></span> Draft saved</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Mockup Area -->
+                            <div class="mockup-area">
+                                <div style="width: 100%; height: 250px; background-color: #f0f0f0; border-radius: 8px; display: flex; justify-content: center; align-items: center; overflow: hidden; position: relative;">
+                                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Figma Mockup" class="mockup-img" style="opacity: 0.6; width: 100%; height: 100%; object-fit: cover;">
+                                    <button class="play-btn"><i class='bx bx-play'></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Rich Text Editor -->
+                            <div class="rich-text-editor">
+                                <div class="toolbar">
+                                    <button><i class='bx bx-bold'></i></button>
+                                    <button><i class='bx bx-italic'></i></button>
+                                    <button><i class='bx bx-underline'></i></button>
+                                    <button><i class='bx bx-strikethrough'></i></button>
+                                    <span class="divider"></span>
+                                    <button><i class='bx bx-list-ul'></i></button>
+                                    <button><i class='bx bx-list-ol'></i></button>
+                                    <span class="divider"></span>
+                                    <button><i class='bx bx-link'></i></button>
+                                    <button><i class='bx bx-code'></i></button>
+                                </div>
+                                <div class="editor-content">
+                                    <p>Here is the Figma project for the UX foundations Module Assignment focused on Understanding the concept of UX.</p>
+                                </div>
+                            </div>
+
+                            <div class="attachments">
+                                <h4>Attachments</h4>
+                                <a href="#" class="attachment-link">[Figma Project Links]</a>
+                                <a href="#" class="attachment-link">[Google Doc]</a>
+                            </div>
+
+                            <div class="pagination-nav">
+                                <div class="nav-text">Next/Previous Student</div>
+                                <div class="nav-links">
+                                    <a href="#" id="prevStudentLink"><i class='bx bx-left-arrow-alt'></i> <span id="prevStudentName">Adedokun Daniel</span></a>
+                                    <span class="divider">|</span>
+                                    <a href="#" id="nextStudentLink"><span id="nextStudentName">UI Biba</span> <i class='bx bx-right-arrow-alt'></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Grading Panel -->
+                        <div class="panel grading-panel" id="gradingPanel">
+                            <div class="panel-header">
+                                <h2 id="gradingPanelHeader">Grading Panel (Uthman)</h2>
+                            </div>
+                            <div class="grading-form">
+                                <div class="form-group">
+                                    <label>Score Input</label>
+                                    <div class="score-input-wrapper">
+                                        <input type="number" placeholder="">
+                                        <span class="score-max">/100</span>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="position: relative;">
+                                    <label>Feedback Box</label>
+                                    <textarea placeholder="Write feedback..."></textarea>
+
+                                    <!-- Success Toast Notification -->
+                                    <div class="success-toast hidden" id="successToast">
+                                        <div style="display: flex; gap: 8px; align-items: flex-start;">
+                                            <i class='bx bxs-check-square toast-icon'></i>
+                                            <div class="toast-text">
+                                                <strong>Assignment Graded Successfully:</strong><br>
+                                                Understanding UX Foundation<br>
+                                                <a href="#" class="view-grade-link">View Grade</a>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="close-toast-btn" id="closeToastBtn"><i class='bx bx-x'></i></button>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-outline-green">Save Draft</button>
+                                    <button type="button" class="btn btn-outline-red">Resubmission</button>
+                                    <button type="button" class="btn btn-solid-green" id="submitGradeBtn">Submit Grade</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="submission.js"></script>
+</body>
+</html>

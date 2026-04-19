@@ -1,0 +1,256 @@
+:root {
+    --primary: #1f8a5b;
+    --primary-dark: #0f5c3d;
+    --bg: #f5f7f6;
+    --white: #ffffff;
+    --border: #e0e0e0;
+    --text: #333;
+    --sidebar-width: 240px;
+}
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 6px;
+  flex: 0.3;
+}
+.search-box input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+.header-icons {
+  display: flex;
+  gap: 15px;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+}
+/* Main Content */
+    .main {
+      flex: 1;
+      padding: 20px 30px;
+      margin-left: 250px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: 500;
+      display: block;
+      margin: 15px 0 5px;
+    }
+
+    input[type="text"],
+    select,
+    textarea,
+    input[type="date"],
+    input[type="time"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    /* Toolbar */
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 5px;
+    }
+
+    .toolbar button {
+      border: 1px solid var(--border);
+      background: white;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* File Upload */
+    .upload-box {
+      border: 2px dashed var(--primary);
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    /* Toggle Switch */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      margin-left: 10px;
+    }
+
+    .switch input {
+      display: none;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      background-color: #ccc;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: 0.4s;
+    }
+
+    .slider:before {
+      content: "";
+      position: absolute;
+      height: 14px;
+      width: 14px;
+      left: 3px;
+      bottom: 3px;
+      background: white;
+      border-radius: 50%;
+      transition: 0.4s;
+    }
+
+    input:checked + .slider {
+      background: var(--primary);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(18px);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #e6f7ee;
+      border-left: 4px solid var(--primary);
+      padding: 15px 20px;
+      border-radius: 8px;
+      display: none;
+    }
+
+    /* Responsive */
+    /* ===================== TABLET ===================== */
+@media (max-width: 1024px) {
+    .main {
+        margin-left: 0; /* Remove sidebar offset */
+        padding: 20px;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Stack cards */
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-group > div {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+/* ===================== MOBILE ===================== */
+@media (max-width: 600px) {
+    .main {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .toolbar button {
+        flex: 1 1 auto;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-group > div {
+        flex-direction: column;
+    }
+
+    .toast {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+}
+

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div>
+        <div class="brand">
+          <img class="brand-logo" src="logo.jpeg" alt="TalentHub logo" />
+          <span>TalentHub</span>
+        </div>
+
+        <div class="profile">
+          <img src="https://i.pravatar.cc/120?img=12" alt="Ezekiel Moyinoluwa programmer" />
+          <div>
+            <p>Ezekiel Moyinoluwa</p>
+            <span>ID: CART23456</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="#"><i class="ri-dashboard-line"></i><span>Dashboard</span></a>
+          <a href="#" class="active"><i class="ri-book-open-line"></i><span>Course Manager</span></a>
+          <a href="#"><i class="ri-file-list-3-line"></i><span>Assignment</span></a>
+          <a href="#"><i class="ri-article-line"></i><span>Submission Desk</span></a>
+          <a href="#"><i class="ri-chat-3-line"></i><span>Discussion</span></a>
+          <a href="#"><i class="ri-line-chart-line"></i><span>Student Progress</span></a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="#"><i class="ri-question-line"></i><span>Help &amp; Support</span></a>
+        <a href="#"><i class="ri-settings-3-line"></i><span>Settings</span></a>
+        <a href="#" class="logout"><i class="ri-logout-box-r-line"></i><span>Logout</span></a>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <button class="icon-btn mobile-only" aria-label="Open navigation">
+          <i class="ri-menu-line"></i>
+        </button>
+        <div class="search">
+          <i class="ri-search-line"></i>
+          <input type="text" placeholder="Search" />
+          <i class="ri-mic-line"></i>
+        </div>
+        <button class="icon-btn" aria-label="Notifications">
+          <i class="ri-notification-3-line"></i>
+        </button>
+      </header>
+
+      <section class="page">
+        <h1>Course Builder</h1>
+
+        <div class="content-grid">
+          <div class="left-column">
+            <section class="panel">
+              <div class="panel-header">
+                <h2>Course Structure</h2>
+              </div>
+
+              <div class="stacked-actions">
+                <button class="btn btn-primary">+ Add Module</button>
+                <button class="btn btn-primary">+ Add Lesson</button>
+              </div>
+
+              <div class="course-tree">
+                <div class="tree-item current">
+                  <span class="tree-node complete"></span>
+                  <div class="tree-copy">
+                    <strong>Module 1: Introduction</strong>
+                    <span><i class="ri-check-line"></i> Welcome to the Course</span>
+                    <span><i class="ri-check-line"></i> How This Program Works</span>
+                  </div>
+                  <i class="ri-more-2-fill tree-more"></i>
+                </div>
+
+                <div class="tree-item">
+                  <span class="tree-node active"></span>
+                  <div class="tree-copy">
+                    <strong>Module 2: UX Foundations</strong>
+                    <span class="active-lesson"><i class="ri-play-mini-fill"></i> Understanding User Experience</span>
+                    <span><i class="ri-lock-2-line"></i> User Research Basics</span>
+                    <span><i class="ri-lock-2-line"></i> Personas &amp; Journey Map</span>
+                  </div>
+                </div>
+
+                <div class="tree-item">
+                  <span class="tree-node muted"></span>
+                  <div class="tree-copy">
+                    <div class="tree-title-row">
+                      <strong>Module 3: Wireframing</strong>
+                      <em>New</em>
+                    </div>
+                    <span><i class="ri-file-list-2-line"></i> Low-Fidelity Design</span>
+                    <span><i class="ri-file-list-2-line"></i> High-Fidelity Design</span>
+                    <span><i class="ri-file-list-2-line"></i> High-Fidelity Design</span>
+                    <span><i class="ri-file-list-2-line"></i> High-Fidelity Design</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel settings-panel">
+              <div class="panel-header">
+                <h2>Settings</h2>
+              </div>
+
+              <label class="field">
+                <span>Visibility (Draft/Published)</span>
+                <div class="switch-row">
+                  <button class="switch" aria-label="Visibility toggle">
+                    <span></span>
+                  </button>
+                </div>
+              </label>
+
+              <label class="field">
+                <span>Course Duration (e.g., 2 weeks)</span>
+                <div class="select-field">
+                  <span>2</span>
+                  <i class="ri-arrow-down-s-line"></i>
+                </div>
+              </label>
+
+              <label class="field">
+                <span>Course Attachments (e.g., syllabus PDF)</span>
+                <div class="attachment-actions">
+                  <button class="btn btn-secondary">Upload file</button>
+                  <button class="btn btn-primary">Add New</button>
+                </div>
+              </label>
+            </section>
+          </div>
+
+          <section class="panel editor-panel">
+            <div class="panel-header">
+              <h2>Module Editor</h2>
+            </div>
+
+            <label class="field">
+              <span>Course Title</span>
+              <input type="text" />
+            </label>
+
+            <div class="field">
+              <div class="field-topline">
+                <span>Course Description</span>
+                <label class="preview-toggle">
+                  <span>Preview as Student</span>
+                  <button class="mini-switch" aria-label="Preview as student">
+                    <span></span>
+                  </button>
+                </label>
+              </div>
+
+              <div class="editor-toolbar">
+                <button><i class="ri-bold"></i></button>
+                <button><i class="ri-italic"></i></button>
+                <button><i class="ri-underline"></i></button>
+                <button><i class="ri-strikethrough"></i></button>
+                <button><i class="ri-list-unordered"></i></button>
+                <button><i class="ri-list-ordered"></i></button>
+                <button><i class="ri-link"></i></button>
+                <button><i class="ri-attachment-2"></i></button>
+              </div>
+
+              <div class="editor-surface"></div>
+            </div>
+
+            <div class="media-card">
+              <video class="course-video" controls preload="metadata">
+                <source src="Reading of book.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div class="resource-heading">
+              <i class="ri-attachment-2"></i>
+              <span>Module Resources (Simple file)</span>
+            </div>
+
+            <div class="upload-zone">
+              <div class="upload-icon"><i class="ri-file-pdf-2-fill"></i></div>
+              <p>Upload or drop your file here</p>
+              <small>or browse to choose file</small>
+              <button class="btn btn-primary">
+                <i class="ri-upload-2-line"></i>
+                Choose file
+              </button>
+            </div>
+
+            <label class="field">
+              <span>Google Doc, or any public URL</span>
+              <input type="text" placeholder="http://docs.google.com/..." />
+            </label>
+          </section>
+        </div>
+
+        <footer class="page-actions">
+          <button class="btn btn-secondary">Save Draft</button>
+          <div class="footer-actions">
+            <button class="btn btn-secondary">Preview</button>
+            <button class="btn btn-primary wide">Publish</button>
+          </div>
+        </footer>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
