@@ -67,12 +67,12 @@
         <p class="socials">
           <img
             src="./images/account-images/googleimage.png"
-            alt="Google Logo Image"><a href="google.com" target="_blank">Sign up with Google</a>
+            alt="Google Logo Image"><a href="#" target="_blank">Sign up with Google</a>
         </p>
         <p class="socials">
           <img
             src="./images/account-images/slackimage.png"
-            alt="Slack Logo Image"><a href="slack.com" target="_blank">Sign up with Slack</a>
+            alt="Slack Logo Image"><a href="#" target="_blank">Sign up with Slack</a>
         </p>
         <h5>
           Don't have an account?<a class="Log" href="index.html">Sign Up</a>
@@ -103,16 +103,22 @@
       }));
     })
     .then(res => {
-      console.log(res);
+  if (res.status === 200 || res.body.status === "success") {
 
-      if (res.status === 200 || res.body.status === "success") {
-        window.location.href = "dashboard.html";
-      } 
-      else {
-        document.getElementById("message").innerText =
-          res.body.message || "Invalid login";
-      }
-    })
+    const token = res.body.data.access_token;
+
+    // Store token
+    localStorage.setItem("token", token);
+
+    // Redirect
+    window.location.href = "dashboard.html";
+  }
+  else {
+    document.getElementById("message").innerText =
+      res.body.message || "Invalid login";
+  }
+})
+    
     .catch(err => {
       console.error(err);
       document.getElementById("message").innerText = "Something went wrong";
