@@ -97,12 +97,12 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20px 20px 20px;
+    padding: 20px 20px 20px;}
 .logo{
     display: flex;
     flex-direction: row;
     gap: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 25px;}
 .logo img{
     width: 20%;
     height: 20%;
@@ -914,165 +914,6 @@ a {
 .search-wrapper h2 {
     display: none;
 }
-<<<<<<< HEAD
-#hamburger {
-    display:none;
-}
-
-.mobile-sidenav {
-    background: #012816;
-    filter: blur(-10px);
-    width: 50%;
-    height: 100vh;
-    z-index: 999;
-    position: fixed;
-    display: none;
-
-}
-.closenav {
-    position: relative;
-}
- #closeHamburger {
-position:absolute;
-right: 20px;
-top: 20px;
-}
-.search-wrapper img {
-    display: none;
-}
-@media (max-width: 768px) {
-#sideNav {
-    display: none;
-}
-#hamburger {
-display: block;
-}
-
-.small-aside-container {
-    display: none;
-}
-.aside-container {
-    display: none;
-    width: 0;
-}
-
-.mobile-sidenav {
-    display: block;
-}
-.search-wrapper img {
-    display: block;
-    width: 20px;
-    height: 20px;
-}
-.main-container {
-    width: 100% !important;
-    margin-left: 0 !important;
-    padding: 0 20px;
-}
-.header {
-    background: none;
-}
-.continue-lesson button {
-    display: none;
-}
-.continue-lesson .svg-wrapper {
-    border-right: none;
-    padding: 0;
-}
-
-.search-wrapper .search-content {
-    display: none;
-}
-.search-wrapper h2 {
-    display: block;
-    font-size: 22px;
-}
-
-
-.personal-engagement-card-container {
-    padding: 0;
-}
-.personal-card-container {
-    width: 100%;
-}
-.personal-content h2 {
-    font-size: 16px;
-}
-.personal-name-id p {
-    font-size: 16px;
-}
-.profile p {
-    font-size: 16px;
-}
-.engagement-card-container {
-    width: 100%;
-}
-.learning-history-card {
-width: 100%;
-}
-.achievement-card {
-width: 100%;
-}
-.engagement-rate {
-    border-right: none;
-}
-.completion-rate {
-    border-right: none;
-    padding: 0;
-}
-
-.trend {
-    justify-content: flex-start;
-}
-
-.stats-rating-wrapper {
-    flex-direction: column;
-}
-.stats-card {
-    width: 100%;
-}
-.average-feedback  {
-    width: 100%;
-}
-.history-card { 
-    flex-direction: column;
-    padding: 10px;
-}
-.history-left-card {
-    display: none;
-}
-.history-right-card {
-    width: 100%;
-}
-.btn-view-upload {
-    flex-direction: column;
-    align-items: flex-start;
-}
-/* this is instructor mobile profile */
-.rate-card {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 100%;
-}
-.engagement-content {
-    align-items: flex-start;
-}
-}
-
-
-/* @media (max-width: 1100px) {
-.aside-container {
-    width: 20%;
-}
-.small-aside-container {
-    width: 8%;
-}
-.main-container {
-    width: 80%;
-}
-} */
-=======
 .logo2{display: none;}
 .dropbtn{display: none;}
 
@@ -1216,4 +1057,3 @@ translate(-9px, 6px);
         width: 100%;
     }
 }
->>>>>>> 2450f17 (updated project files)
